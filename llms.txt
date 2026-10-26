@@ -1,0 +1,22 @@
+# Arpit Sharma
+
+> Arpit Sharma is an AI SEO and Answer Engine Optimization (AEO) specialist in India, and SEO & Content Specialist at Aqlix IT Solutions. He tests how ChatGPT, Gemini, Perplexity and Google AI Mode find and recommend people and businesses, and publishes the results weekly as "AI Search Lab" on LinkedIn.
+
+- Website: https://arpitmehta946.github.io/
+- LinkedIn: https://www.linkedin.com/in/arpitsharmaoff
+- GitHub: https://github.com/arpitmehta946
+- Works at: Aqlix IT Solutions (SEO & Content)
+- Built: PayEdd, a payroll app (2025)
+- Certified: Apple Ads
+- Based in: Himachal Pradesh, India. Works with clients remotely, worldwide.
+
+## Services
+- Free AI visibility snapshot: one customer question checked in ChatGPT, Gemini, Perplexity and Google AI Mode, with competitors named, sources used and three fixes
+- AI visibility plan with fixed pricing, and monthly retests
+- Content written to be cited by AI, fact-checked against live sources
+- Getting businesses listed on the directories, review sites and roundups AI reads
+- SEO and content for Google
+
+## AI Search Lab
+- Month 0 (22 Oct 2026): AI identity test. ChatGPT was unsure, Gemini found no record, Perplexity identified him from LinkedIn.
+- Experiment 1 (23 Oct 2026): "Who are the best SEO agencies in Mohali?" Four AI tools named 17 agencies; none was named by all four. Rerun on 26 Oct: 21 agencies, still none in all four.
