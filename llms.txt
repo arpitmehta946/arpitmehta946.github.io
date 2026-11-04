@@ -23,4 +23,5 @@
 ## AI Search Lab
 - Month 0 (22 Oct 2026): AI identity test. ChatGPT was unsure, Gemini found no record, Perplexity identified him from LinkedIn.
 - Experiment 1 (23 Oct 2026): "Who are the best SEO agencies in Mohali?" Four AI tools named 17 agencies; none was named by all four. Rerun on 26 Oct: 21 agencies, still none in all four.
+- Experiment 3 (4 Nov 2026): the same 10 searches asked to Gemini 5 times each. Gemini cited 85 different pages; 21% were in Google's top 10 (ChatGPT: 4%). Only 7 pages overlapped with ChatGPT's. 87% of Gemini's links were comparison or review articles. Results: https://arpitmehta946.github.io/lab/gemini-vs-chatgpt.html
 - Experiment 2 (1 Nov 2026, published 3 Nov): 10 Indian searches asked to ChatGPT 5 times each and compared with Google's top 10. ChatGPT linked to 134 different pages; only 6 were in Google's top 10. About 2 in 3 links went to brand, institution or government pages. Results: https://arpitmehta946.github.io/lab/google-vs-chatgpt.html
