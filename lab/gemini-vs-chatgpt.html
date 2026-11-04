@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gemini vs ChatGPT: which pages each AI links to (10 Indian searches, 100 answers) | AI Search Lab</title>
+<meta name="description" content="AI Search Lab Experiment 3. The same 10 Indian searches, 5 runs each, in Gemini and ChatGPT. 21% of Gemini's pages were in Google's top 10, against 4% for ChatGPT. Full data and method.">
+<meta name="author" content="Arpit Sharma">
+<link rel="canonical" href="https://arpitmehta946.github.io/lab/gemini-vs-chatgpt.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Arpit Sharma">
+<meta property="og:title" content="Gemini vs ChatGPT: same 10 searches, 100 answers, very different sources">
+<meta property="og:description" content="Gemini linked to Google's top 10 five times more often than ChatGPT, and mostly to comparison articles.">
+<meta property="og:url" content="https://arpitmehta946.github.io/lab/gemini-vs-chatgpt.html">
+<meta property="og:image" content="https://arpitmehta946.github.io/lab/exp3-chart.png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="1350">
+<meta property="og:image:alt" content="Chart: Gemini vs ChatGPT across 50 answers each. Pages linked 85 vs 134; in Google's top 10, 21% vs 4%">
+<meta property="article:published_time" content="2026-11-04">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0F1830">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://arpitmehta946.github.io/lab/gemini-vs-chatgpt.html#article",
+      "headline": "Gemini vs ChatGPT: which pages each AI links to",
+      "description": "The same 10 Indian searches were asked 5 times each in Gemini and ChatGPT. Every link was logged and compared with Google's top 10 organic results.",
+      "datePublished": "2026-11-04",
+      "dateModified": "2026-11-04",
+      "author": { "@type": "Person", "@id": "https://arpitmehta946.github.io/#arpit", "name": "Arpit Sharma", "url": "https://arpitmehta946.github.io/" },
+      "isPartOf": { "@type": "CreativeWorkSeries", "name": "AI Search Lab" },
+      "image": "https://arpitmehta946.github.io/lab/exp3-chart.png",
+      "mainEntityOfPage": "https://arpitmehta946.github.io/lab/gemini-vs-chatgpt.html",
+      "about": ["AI search", "Gemini", "ChatGPT", "SEO", "Answer Engine Optimization"]
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://arpitmehta946.github.io/lab/gemini-vs-chatgpt.html#data",
+      "name": "AI Search Lab Experiment 3: Gemini links vs ChatGPT and Google top 10 (results log)",
+      "description": "Every page Gemini cited in 50 answers (10 searches x 5 runs, 4 Nov 2026, India), marked against Google's top 10 and ChatGPT's links for the same searches.",
+      "creator": { "@id": "https://arpitmehta946.github.io/#arpit" },
+      "temporalCoverage": "2026-11-04",
+      "spatialCoverage": "India",
+      "url": "https://docs.google.com/spreadsheets/d/1NeOKJfnhByAHogX_z_bPSIoWqCq9TTGd2T59E1S7aCE/edit?usp=sharing",
+      "isAccessibleForFree": true
+    }
+  ]
+}
+</script>
+
+<style>
+:root{
+  --night:#0F1830;--night-2:#18233F;--paper:#F1F3F6;--sheet:#FFFFFF;--ink:#121A2E;--muted:#596478;--rule:#D8DDE6;
+  --cite:#3253E6;--mark:#FFE14A;--on-night:#E9EDF5;--on-night-2:#A9B4C9;
+  --disp:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 18px/1.6 var(--disp)}
+a{color:var(--cite);text-underline-offset:3px}
+:focus-visible{outline:3px solid var(--cite);outline-offset:3px;border-radius:6px}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+header.top{background:var(--night);color:var(--on-night);padding:20px 0 128px}
+.crumb{font-size:15px;color:var(--on-night-2)}
+.crumb a{color:var(--on-night)}
+.kick{margin:40px 0 8px;color:var(--mark);font-weight:700;letter-spacing:.06em;font-size:14px;text-transform:uppercase}
+h1{font-size:clamp(32px,5.4vw,52px);line-height:1.08;margin:0 0 16px;font-weight:800;letter-spacing:-.01em}
+.dek{font-size:20px;color:var(--on-night-2);margin:0;max-width:640px}
+.byline{margin-top:20px;font-size:15px;color:var(--on-night-2)}
+main{padding:40px 0 64px}
+h2{font-size:28px;line-height:1.2;margin:48px 0 12px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:-88px 0 8px}
+.stat{background:var(--sheet);border:1px solid var(--rule);border-radius:18px;padding:18px 20px}
+.stat b{display:inline-block;font-size:40px;line-height:1;font-weight:800;margin-bottom:10px}
+.stat span{display:block;font-size:15px;line-height:1.5;color:var(--muted)}
+.stat.hi b{background:linear-gradient(transparent 55%,var(--mark) 55%)}
+mark{background:linear-gradient(transparent 10%,var(--mark) 10%,var(--mark) 90%,transparent 90%);color:var(--ink);padding:0 .14em}
+.tbl{overflow-x:auto;background:var(--sheet);border:1px solid var(--rule);border-radius:18px}
+table{border-collapse:collapse;width:100%;font-size:16px;min-width:560px}
+th,td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:700}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:0}
+tfoot td{font-weight:700}
+.small{font-size:15px;color:var(--muted)}
+.brands{display:grid;gap:12px}
+.brand{background:var(--sheet);border:1px solid var(--rule);border-radius:18px;padding:16px 20px}
+.brand p{margin:4px 0 0;color:var(--cite);font-weight:600}
+figure{margin:24px 0}
+figure img{width:100%;max-width:540px;height:auto;border-radius:18px;display:block}
+figcaption{font-size:15px;color:var(--muted);margin-top:8px}
+ul.limits li,ol.do li{margin-bottom:8px}
+.cta{background:var(--night);color:var(--on-night);border-radius:28px;padding:28px;margin-top:48px}
+.cta h2{margin-top:0;color:#fff}
+.cta a{color:var(--mark)}
+code{font-size:15px;background:#E6EAF0;padding:1px 6px;border-radius:6px;word-break:break-all}
+footer{padding:24px 0 40px;font-size:15px;color:var(--muted)}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <p class="crumb"><a href="../">Arpit Sharma</a> · <a href="../#log">AI Search Lab</a> · Experiment 3</p>
+    <p class="kick">AI Search Lab · Experiment 3</p>
+    <h1>Gemini vs ChatGPT: which pages each AI links to</h1>
+    <p class="dek">The same 10 Indian searches as <a href="google-vs-chatgpt.html" style="color:#fff">Experiment 2</a>. I asked Gemini each one 5 times, in a new chat every time, and compared every page it cited with ChatGPT's links and Google's top 10.</p>
+    <p class="byline">By Arpit Sharma · Tested 4 Nov 2026 · Published <time datetime="2026-11-04">4 Nov 2026</time></p>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="stats">
+    <div class="stat"><b>85</b><span>different pages Gemini cited across 50 answers (ChatGPT: 134)</span></div>
+    <div class="stat hi"><b>21%</b><span>of Gemini's pages were in Google's top 10 for the same search (ChatGPT: 4%)</span></div>
+    <div class="stat"><b>7</b><span>pages were linked by both Gemini and ChatGPT</span></div>
+  </div>
+
+  <h2>What I found</h2>
+  <p><strong>Gemini stayed much closer to Google.</strong> 18 of the 85 pages Gemini cited (21%) were in Google's top 10 for the same search. For ChatGPT it was 6 of 134 (4%). At the website level, 26 of the 80 sites Gemini used (about 1 in 3) had some page in Google's top 10.</p>
+  <p><strong>The two AIs barely agreed.</strong> Only 7 exact pages showed up in both Gemini's and ChatGPT's answers, and only 14 websites.</p>
+  <p><strong>Gemini linked to articles, ChatGPT to brands.</strong> 74 of Gemini's 85 pages (87%) were comparison, review or guide articles. Only 5 were a brand's or institution's own page, and 6 were government sites. ChatGPT went the other way: about half its links were brands' own pages.</p>
+  <p><strong>Gemini changed its sources more.</strong> Only 12 of its 85 pages (about 1 in 7) came back in 3 or more of the 5 runs. For ChatGPT it was about 1 in 2. Gemini also cited fewer pages per answer, about 2.5, and 6 of the 50 answers cited no website at all.</p>
+  <p><strong>For shopping, Gemini sent people back to Google.</strong> For "best laptop under 50000 in India", Gemini cited no websites in any of the 5 runs. It linked the product names to Google Search results instead.</p>
+
+  <figure>
+    <img src="exp3-chart.png" width="1080" height="1350" alt="Chart from AI Search Lab Experiment 3. Across 50 answers each: Gemini cited 85 different pages, ChatGPT 134. 21% of Gemini's pages were in Google's top 10, against 4% for ChatGPT. 1 in 7 Gemini pages came back in 3 or more of 5 runs, against 1 in 2 for ChatGPT. 87% of Gemini's links were comparison or review articles, against 37% for ChatGPT.">
+    <figcaption>The chart from the LinkedIn post. Every number on it is in the data sheet.</figcaption>
+  </figure>
+
+  <h2>Search by search</h2>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>#</th><th>Search</th><th class="n">Gemini pages</th><th class="n">In 3+ runs</th><th class="n">In Google top 10</th><th class="n">ChatGPT pages</th><th class="n">ChatGPT in Google top 10</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>best CRM for small business in India</td><td class="n">5</td><td class="n">1</td><td class="n">0</td><td class="n">14</td><td class="n">1</td></tr>
+        <tr><td>2</td><td>best accounting software for small business in India</td><td class="n">13</td><td class="n">2</td><td class="n">3</td><td class="n">16</td><td class="n">1</td></tr>
+        <tr><td>3</td><td>best term insurance plan in India</td><td class="n">8</td><td class="n">1</td><td class="n">2</td><td class="n">8</td><td class="n">1</td></tr>
+        <tr><td>4</td><td>best laptop under 50000 in India</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n">11</td><td class="n">0</td></tr>
+        <tr><td>5</td><td>best online MBA in India</td><td class="n">14</td><td class="n">1</td><td class="n">4</td><td class="n">18</td><td class="n">0</td></tr>
+        <tr><td>6</td><td>best SEO tools for beginners</td><td class="n">7</td><td class="n">0</td><td class="n">2</td><td class="n">24</td><td class="n">0</td></tr>
+        <tr><td>7</td><td>best project management software for startups</td><td class="n">3</td><td class="n">1</td><td class="n">1</td><td class="n">15</td><td class="n">1</td></tr>
+        <tr><td>8</td><td>how to file ITR online</td><td class="n">13</td><td class="n">3</td><td class="n">4</td><td class="n">7</td><td class="n">1</td></tr>
+        <tr><td>9</td><td>how to start a small business in India</td><td class="n">14</td><td class="n">1</td><td class="n">0</td><td class="n">7</td><td class="n">0</td></tr>
+        <tr><td>10</td><td>best digital marketing course in India</td><td class="n">8</td><td class="n">2</td><td class="n">2</td><td class="n">14</td><td class="n">1</td></tr>
+      </tbody>
+      <tfoot><tr><td></td><td>Total</td><td class="n">85</td><td class="n">12</td><td class="n">18</td><td class="n">134</td><td class="n">6</td></tr></tfoot>
+    </table>
+  </div>
+  <p class="small">"Pages" means different pages across the 5 answers to that search, after removing text fragments, query strings, <code>www.</code> and trailing slashes. The ChatGPT columns are from Experiment 2 (1 Nov 2026).</p>
+
+  <h2>What I'd do with this</h2>
+  <ol class="do">
+    <li><strong>Treat ChatGPT and Gemini as two different jobs.</strong> They linked to almost completely different pages for the same searches.</li>
+    <li><strong>For Gemini, rank on Google and get onto the comparison articles that rank.</strong> Gemini mostly cited articles, and 1 in 5 of its pages were already in Google's top 10.</li>
+    <li><strong>For ChatGPT, make your own product and pricing pages clear.</strong> That's where most of its links went in Experiment 2.</li>
+    <li><strong>Test more than once.</strong> Gemini's sources changed even more between runs than ChatGPT's did.</li>
+  </ol>
+
+  <h2>How I ran it</h2>
+  <ul>
+    <li><strong>Gemini:</strong> gemini.google.com in Chrome, 4 Nov 2026 between 22:25 and 23:06 IST, from India. Model picker on the default, "Flash". A new chat for every run: 10 searches, 5 runs each, 50 answers.</li>
+    <li><strong>What counted as a link:</strong> the source chips Gemini shows inside the answer. Each chip was opened and its page recorded. Links from product names to Google Search were not counted as sources.</li>
+    <li><strong>ChatGPT and Google:</strong> the same data as <a href="google-vs-chatgpt.html">Experiment 2</a> (ChatGPT free plan, 1 Nov 2026; google.co.in organic top 10, 1 Nov 2026).</li>
+    <li><strong>Link types</strong> were sorted with the same rule as Experiment 2: government sites, a brand's or institution's own page, and everything else as articles (vendor-blog roundups count as articles).</li>
+    <li>Every row, with the Gemini chat ID it came from, is in the <a href="https://docs.google.com/spreadsheets/d/1NeOKJfnhByAHogX_z_bPSIoWqCq9TTGd2T59E1S7aCE/edit?usp=sharing">public data sheet</a> (All links, By search, Link types and Method tabs).</li>
+  </ul>
+
+  <h2>Limits</h2>
+  <ul class="limits">
+    <li><strong>Different plans.</strong> The Google account used has a Google membership, which may include a paid Gemini plan. The ChatGPT test used the free plan. That alone could change the results.</li>
+    <li><strong>Different days.</strong> ChatGPT and Google were checked on 1 Nov, Gemini on 4 Nov.</li>
+    <li>Small test: 10 searches, one account, one location, one evening. It shows a pattern, not a law.</li>
+    <li>The runs were typed and logged by my AI assistant in my Gemini account, following a fixed script. The chat IDs are logged instead of screenshots.</li>
+    <li>One run showed a Gemini "which response is more helpful?" screen with two answers. It wasn't counted and was run again in a new chat. The first two CRM runs were logged with an earlier version of the script and may undercount links.</li>
+    <li>It compares exact pages. A site can still matter to an AI through a different page.</li>
+  </ul>
+  <p>For a bigger picture, Ahrefs found that about 12% of links cited by ChatGPT, Gemini and Copilot were in Google's top 10 for the same query (15,000 prompts, published 11 Aug 2025). My Gemini number (21%) is higher and my ChatGPT number (4%) is lower, on a much smaller, India-only sample.</p>
+
+  <div class="cta">
+    <h2>Want this test for your business?</h2>
+    <p>I'll run one question your customers ask through ChatGPT, Gemini, Perplexity and Google AI Mode, and show you who gets named, which sources they lean on, and three fixes. Free. <a href="../#snapshot">Get your AI snapshot</a> or follow <a href="https://www.linkedin.com/in/arpitsharmaoff" rel="me">AI Search Lab on LinkedIn</a>.</p>
+  </div>
+</main>
+
+<footer class="wrap">
+  <p><a href="../">Arpit Sharma</a> · AI SEO and AEO, India · <a href="../#log">All experiments</a></p>
+</footer>
+</body>
+</html>
