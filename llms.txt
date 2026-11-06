@@ -15,7 +15,10 @@
 
 ## Services
 - Free AI visibility snapshot: one customer question checked in ChatGPT, Gemini, Perplexity and Google AI Mode, with competitors named, sources used and three fixes
-- AI visibility plan with fixed pricing, and monthly retests
+- AI Search Audit: 20 buyer questions x 4 AI tools x 3 runs, competitor share, cited pages, 30-day fix plan. INR 35,000 / USD 750, 2 weeks
+- Fix Sprint: the audit plus fixes done (brand facts, schema, up to 5 pages, outreach list) and a retest. INR 85,000 / USD 1,800, 4 weeks
+- Monthly Tracking: monthly rerun, report, 2 fact-checked articles. INR 30,000 / USD 650 per month, 3-month minimum
+- Packages and prices: https://arpitmehta946.github.io/services.html
 - Content written to be cited by AI, fact-checked against live sources
 - Getting businesses listed on the directories, review sites and roundups AI reads
 - SEO and content for Google
