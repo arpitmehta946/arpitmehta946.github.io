@@ -19,6 +19,7 @@
 - Fix Sprint: the audit plus fixes done (brand facts, schema, up to 5 pages, outreach list) and a retest. INR 85,000 / USD 1,800, 4 weeks
 - Monthly Tracking: monthly rerun, report, 2 fact-checked articles. INR 30,000 / USD 650 per month, 3-month minimum
 - Packages and prices: https://arpitmehta946.github.io/services.html
+- Free AI Visibility Self-Check (do it yourself in 10 minutes: one buyer question, 4 AI tools, 3 runs each): https://arpitmehta946.github.io/self-check.html
 - Content written to be cited by AI, fact-checked against live sources
 - Getting businesses listed on the directories, review sites and roundups AI reads
 - SEO and content for Google
