@@ -188,6 +188,7 @@ h2{font-weight:800;font-size:clamp(36px,5vw,68px);line-height:.98;letter-spacing
 .t-zero p{margin:0}
 .t-zero .meta{color:#4A4220;margin-top:14px}
 .t-src ul{list-style:none;margin:12px 0 0;padding:0}
+.runs{width:100%;border-collapse:collapse;margin-top:10px}.runs th,.runs td{background:none!important;box-shadow:none!important;padding:8px 6px;border-top:1px solid var(--rule);text-align:left;font-size:15px}.runs thead th{text-align:left!important;border-top:0;font-size:13px;color:var(--muted)}.dots{display:inline-flex;gap:5px}.dots i{width:14px;height:14px;border-radius:4px;background:#EEF1F5;display:block}.dots i.on{background:var(--cite)}
 .t-src li{padding:9px 0;border-top:1px solid var(--rule);font-size:15px;line-height:1.4}
 .t-src b{display:block;font-size:15px}
 .t-85 .big{color:var(--mark)}
@@ -403,33 +404,31 @@ footer a{color:var(--on-night-2)}
         </article>
 
         <article class="tile t-zero" aria-labelledby="h-zero">
-          <h3 id="h-zero">Experiment 1: SEO agencies in Mohali</h3>
-          <p class="big">0 of 17</p>
-          <p>agencies were named by all four AI tools.</p>
-          <p class="meta">23 Oct 2026. Rerun on 26 Oct: 21 agencies, still none in all four.</p>
+          <h3 id="h-zero">6 Indian brands, two AI tools</h3>
+          <p class="big">1 of 6</p>
+          <p>brands were named by ChatGPT in every run. Perplexity named 5 of 6 every time.</p>
+          <p class="meta">11&ndash;12 Nov 2026. Each brand's buyer question, 3 runs per tool, free versions.</p>
         </article>
 
         <article class="tile t-src" aria-labelledby="h-src">
-          <h3 id="h-src">Where each answer came from</h3>
+          <h3 id="h-src">Who ChatGPT named instead</h3>
           <ul>
-            <li><b>ChatGPT</b>An agency directory and review ratings</li>
-            <li><b>Perplexity</b>LinkedIn and agency "best of" lists</li>
-            <li><b>Gemini</b>Agencies' own websites</li>
-            <li><b>AI Mode</b>Agencies' own pages and a "Top 10" list</li>
+            <li><b>Big names, every run</b>Zoho, greytHR, Skechers, Samsonite, Minimalist</li>
+            <li><b>Where its links went</b>About half to brands' own product and pricing pages</li>
+            <li><b>The takeaway</b>Showing up in one AI tool tells you nothing about the others</li>
           </ul>
         </article>
 
         <article class="tile t-grid" aria-labelledby="h-grid">
-          <h3 id="h-grid">Each tool handed over a different shortlist</h3>
-          <p class="meta">"Who are the best SEO agencies in Mohali?" Agencies shown as letters on purpose. This was a test of AI, not a ranking.</p>
-          <div class="gridwrap" role="figure" aria-label="Which agencies each AI tool named on 23 October 2026, anonymised as letters A to Q.">
-            <table>
-              <thead><tr><th scope="col"><span class="sr">Tool</span></th>
-                <th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th><th>I</th><th>J</th><th>K</th><th>L</th><th>M</th><th>N</th><th>O</th><th>P</th><th>Q</th></tr></thead>
+          <h3 id="h-grid">Same question. Different winners.</h3>
+          <p class="meta">How many of 3 runs named the brand. Brand names left out on purpose; this was a test of AI, not a ranking.</p>
+          <div class="gridwrap" role="figure" aria-label="ChatGPT vs Perplexity, runs out of 3 that named each brand: CRM 3 and 3; payroll app 1 and 3; HR software 0 and 3; everyday shoes 0 and 3; cabin luggage 1 and 3; acne skincare 0 and 0.">
+            <table class="runs">
+              <thead><tr><th scope="col">Category</th><th scope="col">ChatGPT</th><th scope="col">Perplexity</th></tr></thead>
               <tbody id="gridbody"></tbody>
             </table>
           </div>
-          <div class="key"><span><i style="background:var(--mark);box-shadow:inset 0 0 0 2px #D9B91A"></i>Named by 3 tools</span><span><i style="background:var(--cite)"></i>Named</span><span><i style="background:#EEF1F5"></i>Not named</span></div>
+          <div class="key"><span><i style="background:var(--cite)"></i>Named in that run</span><span><i style="background:#EEF1F5"></i>Not named</span></div>
         </article>
 
         <article class="tile t-85" aria-labelledby="h-85">
@@ -440,21 +439,21 @@ footer a{color:var(--on-night-2)}
         </article>
 
         <article class="tile t-log" aria-labelledby="h-log" id="log">
-          <h3 id="h-log">Experiment log</h3>
+          <h3 id="h-log">What this means for your brand</h3>
           <ol class="log" reversed>
-            <!-- LOG: newest experiment first. Weekly updates add an <li> here. -->
-            <li><time datetime="2026-11-04">4 Nov 2026</time><div><b><a href="lab/gemini-vs-chatgpt.html">Experiment 3: Gemini vs ChatGPT</a></b><span>21% of Gemini's pages were in Google's top 10. ChatGPT: 4%.</span></div></li>
-            <li><time datetime="2026-11-03">3 Nov 2026</time><div><b><a href="lab/google-vs-chatgpt.html">Experiment 2: Google's top 10 vs ChatGPT</a></b><span>134 pages linked, only 6 in Google's top 10.</span></div></li>
-            <li><time datetime="2026-10-27">27 Oct 2026</time><div><b>Experiment 1: SEO agencies in Mohali</b><span>Four tools, 17 names, zero agreement.</span></div></li>
-            <li><time datetime="2026-10-22">22 Oct 2026</time><div><b>Month 0: who am I to AI?</b><span>The identity test above. Rerun on the 22nd of every month.</span></div></li>
+            <!-- LOG: newest client-relevant finding first. Only add findings a business owner can act on. -->
+            <li><time datetime="2026-11-12">12 Nov 2026</time><div><b>6 Indian brands: ChatGPT vs Perplexity</b><span>Perplexity named 5 of 6 every time. ChatGPT, 1 of 6. Check both.</span></div></li>
+            <li><time datetime="2026-11-11">11 Nov 2026</time><div><b>Named isn't the same as chosen</b><span>One CRM came up in 11 of 12 answers, but usually last and framed as "the telecalling option".</span></div></li>
+            <li><time datetime="2026-11-04">4 Nov 2026</time><div><b>One answer is a screenshot, not a pattern</b><span>Only 1 in 7 of Gemini's cited pages came back in 3 of 5 runs. Always test 3 times.</span></div></li>
+            <li><time datetime="2026-10-22">22 Oct 2026</time><div><b>AI can mix you up with someone else</b><span>The identity test above. Rerun on the 22nd of every month.</span></div></li>
           </ol>
         </article>
 
         <article class="tile t-next" aria-labelledby="h-next">
-          <p class="meta">Next week</p>
-          <h3 id="h-next">You pick the next search</h3>
-          <p>Vote on LinkedIn for the search I test next, and I'll run it the same way.</p>
-          <a class="btn ink" href="https://www.linkedin.com/in/arpitsharmaoff" rel="me">Follow on LinkedIn</a>
+          <p class="meta">Free, 10 minutes</p>
+          <h3 id="h-next">Check your own brand</h3>
+          <p>The same method I use: your buyer's question, 4 AI tools, 3 runs each, scored out of 12.</p>
+          <a class="btn ink" href="self-check.html">Start the self-check</a>
         </article>
       </div>
     </div>
@@ -604,7 +603,7 @@ footer a{color:var(--on-night-2)}
     </div>
     <footer>
       <span>© 2026 Arpit Sharma · <a href="https://github.com/arpitmehta946" rel="me">GitHub</a></span>
-      <span>Last updated <time datetime="2026-11-04">4 November 2026</time></span>
+      <span>Last updated <time datetime="2026-11-12">12 November 2026</time></span>
     </footer>
   </div>
 </section>
@@ -612,21 +611,10 @@ footer a{color:var(--on-night-2)}
 <div class="sticky"><a class="btn y" href="#snapshot">Get a free AI snapshot</a></div>
 
 <script>
-// Experiment 1 grid (23 Oct 2026). Letters only; names stay private.
-var named={"ChatGPT":"BCFGHI","Perplexity":"ADJKLMN","Gemini":"ADEOP","AI Mode":"ABCEQ"};
-var letters="ABCDEFGHIJKLMNOPQ".split("");
-function count(l){var n=0;for(var t in named){if(named[t].indexOf(l)>-1)n++}return n}
-var rows="";
-for(var t in named){
-  rows+='<tr><th class="row" scope="row">'+t+'</th>';
-  letters.forEach(function(l){
-    rows+=named[t].indexOf(l)>-1
-      ?'<td class="'+(count(l)===3?'on3':'on')+'" title="'+t+' named Agency '+l+'"><span class="sr">Named Agency '+l+'</span></td>'
-      :'<td></td>';
-  });
-  rows+='</tr>';
-}
-document.getElementById("gridbody").innerHTML=rows;
+// 6-brand test (11-12 Nov 2026): runs out of 3 that named the brand. Names stay private.
+var runs=[["CRM",3,3],["Payroll app",1,3],["HR software",0,3],["Everyday shoes",0,3],["Cabin luggage",1,3],["Acne skincare",0,0]];
+function dots(n,tool,cat){var h="";for(var i=0;i<3;i++){h+='<i class="'+(i<n?'on':'')+'"></i>'}return '<td><span class="dots" title="'+tool+': '+n+' of 3 runs">'+h+'</span><span class="sr">'+n+' of 3</span></td>'}
+document.getElementById("gridbody").innerHTML=runs.map(function(r){return '<tr><th class="row" scope="row">'+r[0]+'</th>'+dots(r[1],"ChatGPT",r[0])+dots(r[2],"Perplexity",r[0])+'</tr>'}).join("");
 
 // Hero: the tool name cycles through the four AI tools.
 (function(){
