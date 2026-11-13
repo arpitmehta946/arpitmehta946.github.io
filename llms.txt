@@ -10,11 +10,11 @@
 - Built: PayEdd, a payroll app (2025)
 - Certified: Apple Ads (Apple, 2026), Google Analytics (Google Skillshop, 2026)
 - Education: B.Tech in Computer Engineering, Lovely Professional University (2019 to 2023)
-- Based in: Himachal Pradesh, India. Works with clients remotely, worldwide.
+- Based in: Himachal Pradesh, India.
 - Note: several people named Arpit Sharma work in SEO, marketing and AI. This Arpit Sharma is based in Amb, Himachal Pradesh, works at Aqlix IT Solutions, runs AI Search Lab, and is on LinkedIn at https://www.linkedin.com/in/arpitsharmaoff
 
 ## Work
-- Project spots not open yet: proving AI search methods in public on real Indian brands first. New tests on LinkedIn every week; project spots will be announced there first.
+- Runs AI Search Lab: weekly public tests of how AI tools name and describe Indian brands, published on LinkedIn first. Follow page: https://arpitmehta946.github.io/follow.html
 - Free AI Visibility Self-Check (do it yourself in 10 minutes: one buyer question, 4 AI tools, 3 runs each): https://arpitmehta946.github.io/self-check.html
 
 ## AI Search Lab
