@@ -457,7 +457,7 @@ document.addEventListener('selectstart',function(e){if(!ok(e.target.nodeType===1
           <p class="meta" style="margin-top:14px">Brand names left out on purpose: this tested the AI, not the brands. <a href="lab/6-brands-chatgpt-vs-perplexity.html">See the full results</a></p>
         </div>
         <div class="iso" id="iso"><div class="plane" id="plane" aria-hidden="true"></div>
-          <table class="sr"><caption>Runs out of 3 that named each brand</caption><thead><tr><th>Category</th><th>ChatGPT</th><th>Perplexity</th></tr></thead><tbody id="srbody"></tbody></table>
+          <table class="sr"><caption>6 Indian brands, 11–12 Nov 2026: runs out of 3 that named each brand, ChatGPT vs Perplexity</caption><thead><tr><th>Category</th><th>ChatGPT</th><th>Perplexity</th></tr></thead><tbody><tr><th scope="row">CRM</th><td>3 of 3</td><td>3 of 3</td></tr><tr><th scope="row">Payroll app</th><td>1 of 3</td><td>3 of 3</td></tr><tr><th scope="row">HR software</th><td>0 of 3</td><td>3 of 3</td></tr><tr><th scope="row">Everyday shoes</th><td>0 of 3</td><td>3 of 3</td></tr><tr><th scope="row">Cabin luggage</th><td>1 of 3</td><td>3 of 3</td></tr><tr><th scope="row">Acne skincare</th><td>0 of 3</td><td>0 of 3</td></tr></tbody></table>
         </div>
       </article>
 
@@ -624,7 +624,7 @@ document.addEventListener('selectstart',function(e){if(!ok(e.target.nodeType===1
   runs.forEach(function(r,k){var x=110+k*80+23;
     h+='<span class="cat" style="left:'+(110+k*80)+'px">'+r[0]+'</span>'+bar(r[2],'ppx',x,18)+bar(r[1],'gpt',x,88);
     t+='<tr><th scope="row">'+full[k]+'</th><td>'+r[1]+' of 3</td><td>'+r[2]+' of 3</td></tr>';});
-  plane.innerHTML=h;sr.innerHTML=t;
+  plane.innerHTML=h;
 })();
 
 // Hero coverflow: every card stays visible; the asked-about tool comes to the front.
