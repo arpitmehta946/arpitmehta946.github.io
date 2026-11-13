@@ -98,6 +98,12 @@ a:focus-visible,button:focus-visible{outline:3px solid #FFB547;outline-offset:3p
 
 .btn.y,.btn.ink{background:linear-gradient(115deg,#9B7BFF,#4C8DFF 48%,#2DE2D0)!important;color:#07102A!important;border-color:transparent!important;box-shadow:0 14px 40px -14px rgba(91,140,255,.8)!important}
 </style>
+<!-- No-copy: blocks casual selecting/copying. Inputs, code samples and the email stay usable. -->
+<style>body{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}input,textarea,code,.mail,.copyable{-webkit-user-select:text;user-select:text}img{-webkit-user-drag:none;user-drag:none}</style>
+<script>(function(){function ok(t){return t&&t.closest&&t.closest('input,textarea,code,.mail,.copyable')}
+['copy','cut'].forEach(function(ev){document.addEventListener(ev,function(e){if(!ok(e.target)&&!ok(document.activeElement))e.preventDefault()})});
+document.addEventListener('dragstart',function(e){if(e.target.tagName==='IMG')e.preventDefault()});
+document.addEventListener('selectstart',function(e){if(!ok(e.target.nodeType===1?e.target:e.target.parentElement))e.preventDefault()});})();</script>
 </head>
 <body>
 <header class="top">
