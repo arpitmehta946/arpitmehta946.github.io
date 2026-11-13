@@ -323,6 +323,19 @@ footer a{color:var(--on-night-2)}
   .sticky{display:block;position:fixed;left:12px;right:12px;bottom:12px;z-index:10}
   .sticky .btn{display:flex;width:100%;box-shadow:0 12px 30px -10px rgba(0,0,0,.55)}
 }
+.guess{margin-top:18px;background:var(--night-2,#18233F);border:1px solid rgba(233,237,245,.15);border-radius:18px;padding:18px}
+.guess p{margin:0 0 10px;font-weight:700;color:#fff;font-size:17px}
+.guess .opts{display:flex;flex-wrap:wrap;gap:8px}
+.guess button{font:inherit;font-weight:700;font-size:16px;padding:9px 16px;border-radius:999px;border:2px solid rgba(233,237,245,.4);background:transparent;color:#E9EDF5;cursor:pointer}
+.guess button:hover{border-color:#FFE14A}
+.guess button[aria-pressed="true"]{background:#FFE14A;color:#121A2E;border-color:#FFE14A}
+.guess .locked{margin:12px 0 0;font-size:15px;color:#C3CCDD;min-height:1.4em}
+.upnext{list-style:none;margin:16px 0 0;padding:0}
+.upnext li{display:flex;gap:12px;align-items:baseline;padding:10px 0;border-top:1px solid rgba(233,237,245,.15)}
+.upnext time{flex:none;font-weight:800;color:#FFE14A;font-size:15px;min-width:58px}
+.upnext span{font-size:16px;color:#E9EDF5}
+.hook{margin:18px 0 0;font-size:19px;color:#fff}
+.hook b{color:#FFE14A}
 .soon{display:grid;grid-template-columns:1.25fr 1fr;gap:16px;background:#0F1830;color:#E9EDF5;border-radius:28px;padding:32px}
 .soon .intro{color:#C3CCDD}.soon h2{color:#fff;margin:10px 0 14px}
 .soon-tag{display:inline-flex;align-items:center;gap:8px;margin:0;font-weight:700;font-size:14px;letter-spacing:.04em;text-transform:uppercase;color:#FFE14A}
@@ -470,8 +483,18 @@ footer a{color:var(--on-night-2)}
       <div class="soon">
         <div class="soon-main">
           <p class="soon-tag"><span class="dot" aria-hidden="true"></span>New test every week</p>
-          <h2 id="h-work">Want ChatGPT to name your brand? Watch how it decides.</h2>
-          <p class="intro">Every week I test real Indian brands in public: which questions ChatGPT answers, which pages it reads, and why it names one brand over another. Next up, on 26 Nov: do Indian brands block ChatGPT?</p>
+          <h2 id="h-work">ChatGPT named only 1 of 6 Indian brands every time. Would yours make the cut?</h2>
+          <p class="intro">Every week I test real Indian brands in public to answer one question: what decides who ChatGPT picks? Brand size, reviews, press, or your own website? I'm testing each one.</p>
+          <div class="guess" data-guess>
+            <p>Guess first: how many of 34 Indian brands block ChatGPT from their website?</p>
+            <div class="opts" role="group" aria-label="Your guess">
+              <button type="button" data-v="0" aria-pressed="false">0</button>
+              <button type="button" data-v="1 to 5" aria-pressed="false">1–5</button>
+              <button type="button" data-v="6 to 15" aria-pressed="false">6–15</button>
+              <button type="button" data-v="16 or more" aria-pressed="false">16+</button>
+            </div>
+            <p class="locked" aria-live="polite"></p>
+          </div>
           <div class="soon-btns">
             <a class="btn y" href="https://www.linkedin.com/in/arpitsharmaoff" rel="me">Follow the lab</a>
             <a class="btn line" href="follow.html">Pick the next category to test</a>
@@ -479,11 +502,11 @@ footer a{color:var(--on-night-2)}
           <p class="soon-fine">Free to read, free to use. Every result goes up on LinkedIn first.</p>
         </div>
         <div class="soon-side">
-          <p class="soon-label">What each test shows you</p>
-          <ul class="soon-list">
-            <li>Real buyer questions tested in ChatGPT, Gemini, Perplexity and Google AI Mode, 3 runs each</li>
-            <li>Which brands AI names, which it skips, and the exact pages it reads to decide</li>
-            <li>What to fix on the pages AI quotes, and retests to see what actually moved</li>
+          <p class="soon-label">Coming up on LinkedIn</p>
+          <ul class="upnext">
+            <li><time>24 Nov</time><span>AI mixed me up with another Arpit Sharma. I fixed my profiles. Did it work?</span></li>
+            <li><time>26 Nov</time><span>Do Indian brands block ChatGPT? I read 34 robots.txt files.</span></li>
+            <li><time>Weekly</time><span>A new category tested. <a href="follow.html" style="color:#FFE14A">Pick the next one</a></span></li>
           </ul>
           <div class="soon-proof">
             <div><b>150+</b><span>AI answers logged</span></div>
@@ -566,6 +589,19 @@ document.getElementById("gridbody").innerHTML=runs.map(function(r){return '<tr><
     el.classList.remove("swap");void el.offsetWidth;
     el.textContent=tools[i];el.classList.add("swap");
   },2200);
+})();
+</script>
+<script>
+(function(){
+  var KEY='guess-robots-34';
+  document.querySelectorAll('[data-guess]').forEach(function(box){
+    var btns=box.querySelectorAll('button'), out=box.querySelector('.locked');
+    function show(v){btns.forEach(function(b){b.setAttribute('aria-pressed', b.dataset.v===v?'true':'false')});
+      if(v){out.textContent='Locked in: '+v+'. The answer goes up on LinkedIn on 26 Nov. Come back and see if you were right.'}}
+    var saved=null; try{saved=localStorage.getItem(KEY)}catch(e){}
+    if(saved) show(saved);
+    btns.forEach(function(b){b.addEventListener('click',function(){show(b.dataset.v); try{localStorage.setItem(KEY,b.dataset.v)}catch(e){}})});
+  });
 })();
 </script>
 </body>

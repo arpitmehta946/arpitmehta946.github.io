@@ -65,6 +65,19 @@ h2{font-size:clamp(28px,4vw,40px);line-height:1.12;margin:0 0 14px;letter-spacin
 .get h3{margin:0 0 6px;font-size:20px}.get p{margin:0;color:var(--muted);font-size:16px}
 .get-note{margin-top:14px;font-size:15px;color:var(--muted)}
 
+.guess{margin-top:18px;background:#FFFFFF;border:1px solid #D8DDE6;border-radius:18px;padding:18px}
+.guess p{margin:0 0 10px;font-weight:700;color:#121A2E;font-size:17px}
+.guess .opts{display:flex;flex-wrap:wrap;gap:8px}
+.guess button{font:inherit;font-weight:700;font-size:16px;padding:9px 16px;border-radius:999px;border:2px solid #C9D0DC;background:transparent;color:#121A2E;cursor:pointer}
+.guess button:hover{border-color:#FFE14A}
+.guess button[aria-pressed="true"]{background:#FFE14A;color:#121A2E;border-color:#FFE14A}
+.guess .locked{margin:12px 0 0;font-size:15px;color:#596478;min-height:1.4em}
+.upnext{list-style:none;margin:16px 0 0;padding:0}
+.upnext li{display:flex;gap:12px;align-items:baseline;padding:10px 0;border-top:1px solid #D8DDE6}
+.upnext time{flex:none;font-weight:800;color:#3253E6;font-size:15px;min-width:58px}
+.upnext span{font-size:16px;color:#121A2E}
+.hook{margin:18px 0 0;font-size:19px;color:#121A2E}
+.hook b{color:#FFE14A}
 /* timeline */
 .tl{list-style:none;margin:26px 0 0;padding:0;border-left:3px solid var(--rule)}
 .tl li{position:relative;padding:0 0 22px 24px}
@@ -110,8 +123,8 @@ footer{padding:40px 0;font-size:15px;color:var(--muted);text-align:center}
       <nav aria-label="Main"><a href="./#proof">AI Search Lab</a><a href="self-check.html">Self-check</a></nav>
     </div>
     <p class="status"><span class="dot" aria-hidden="true"></span>New test every week</p>
-    <h1>Want ChatGPT to name <em>your brand</em>? Watch how it decides.</h1>
-    <p class="lede">Every week I test real Indian brands in public: which questions ChatGPT answers, which pages it reads, and why it names one brand over another. Follow along, and use every finding on your own brand.</p>
+    <h1>ChatGPT named only 1 of 6 Indian brands every time. Would <em>yours</em> make the cut?</h1>
+    <p class="lede">Every week I test real Indian brands in public to answer one question: what decides who ChatGPT picks? Brand size, reviews, press, or your own website? Follow along, and use every finding on your own brand.</p>
     <div class="hero-btns">
       <a class="btn y" href="https://www.linkedin.com/in/arpitsharmaoff" rel="me">Follow the lab</a>
       <a class="btn line" href="self-check.html">Check your brand today, free</a>
@@ -145,8 +158,19 @@ footer{padding:40px 0;font-size:15px;color:var(--muted);text-align:center}
       <p class="kicker">The lab so far</p>
       <h2 id="h-tl">Every test makes the method sharper</h2>
       <p class="intro">Each one goes up on LinkedIn first. Follow along and you'll see the next result the day it lands.</p>
+      <div class="guess" data-guess style="margin-bottom:22px">
+        <p>Guess first: how many of 34 Indian brands block ChatGPT from their website?</p>
+        <div class="opts" role="group" aria-label="Your guess">
+          <button type="button" data-v="0" aria-pressed="false">0</button>
+          <button type="button" data-v="1 to 5" aria-pressed="false">1–5</button>
+          <button type="button" data-v="6 to 15" aria-pressed="false">6–15</button>
+          <button type="button" data-v="16 or more" aria-pressed="false">16+</button>
+        </div>
+        <p class="locked" aria-live="polite"></p>
+      </div>
       <ol class="tl">
-        <li class="next"><time>26 Nov 2026</time><b>Do Indian brands block ChatGPT?</b><span>I read the robots.txt files of 34 brands. Here's what I found.</span></li>
+        <li class="next"><time>26 Nov 2026</time><b>Do Indian brands block ChatGPT?</b><span>I read the robots.txt files of 34 brands. Make your guess above, then see the answer.</span></li>
+        <li class="next"><time>24 Nov 2026</time><b>AI mixed me up with another person. Did fixing it work?</b><span>I fixed my profiles on 2 Nov. Same questions, same tools, rerun on 16 Nov.</span></li>
         <li><time>12 Nov 2026</time><b>6 Indian brands, two AI tools</b><span>Perplexity named 5 of 6 every time. ChatGPT, 1 of 6. <a href="lab/6-brands-chatgpt-vs-perplexity.html">See the results</a></span></li>
         <li><time>11 Nov 2026</time><b>Named isn't the same as chosen</b><span>A CRM came up in 11 of 12 answers, but usually last.</span></li>
         <li><time>4 Nov 2026</time><b>One answer is a screenshot, not a pattern</b><span>Only 1 in 7 of Gemini's cited pages came back in 3 of 5 runs. <a href="lab/gemini-vs-chatgpt.html">See the test</a></span></li>
@@ -193,5 +217,18 @@ footer{padding:40px 0;font-size:15px;color:var(--muted);text-align:center}
 </main>
 
 <footer><a href="./">Arpit Sharma</a> · AI Search Lab · <a href="self-check.html">Free self-check</a></footer>
+<script>
+(function(){
+  var KEY='guess-robots-34';
+  document.querySelectorAll('[data-guess]').forEach(function(box){
+    var btns=box.querySelectorAll('button'), out=box.querySelector('.locked');
+    function show(v){btns.forEach(function(b){b.setAttribute('aria-pressed', b.dataset.v===v?'true':'false')});
+      if(v){out.textContent='Locked in: '+v+'. The answer goes up on LinkedIn on 26 Nov. Come back and see if you were right.'}}
+    var saved=null; try{saved=localStorage.getItem(KEY)}catch(e){}
+    if(saved) show(saved);
+    btns.forEach(function(b){b.addEventListener('click',function(){show(b.dataset.v); try{localStorage.setItem(KEY,b.dataset.v)}catch(e){}})});
+  });
+})();
+</script>
 </body>
 </html>
