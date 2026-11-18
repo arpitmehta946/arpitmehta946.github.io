@@ -251,6 +251,20 @@ section{padding:130px 0 0}
 .v-mid{background:rgba(255,198,90,.15);color:var(--mid)}.v-bad{background:rgba(255,126,149,.15);color:var(--bad)}.v-good{background:rgba(65,226,168,.15);color:var(--good)}
 .voice{font-family:var(--voice);font-style:italic;font-size:18px;line-height:1.45;color:var(--soft);margin:0}
 .q{display:flex;gap:10px;align-items:center;margin:18px 0 8px;padding:12px 16px;border-radius:14px;background:rgba(0,0,0,.25);border:1px solid var(--line);font-size:15.5px;color:var(--soft)}
+.b-id .said{grid-template-columns:190px 1fr}
+.ba{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin-top:6px}.ba .verdict{margin-top:0}.ba .arr{color:var(--soft);font-weight:700}
+.cited,.fixed{margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+.cited-h{margin:0 0 10px;font-weight:700;font-size:15px;color:var(--soft)}
+.cited ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.cited li{display:flex;flex-direction:column;gap:6px;font-size:14px}
+.cited li span{font-weight:700}.cited em{font-style:normal;color:var(--soft);font-size:13px}
+.dots{display:flex;gap:5px}.dots i{width:12px;height:12px;border-radius:50%;border:1.5px solid rgba(214,224,255,.35)}
+.dots[data-n="3"] i{background:var(--good);border-color:var(--good);box-shadow:0 0 8px rgba(65,226,168,.5)}
+.dots[data-n="0"] i{border-style:dashed;border-color:var(--bad)}
+.fixed ol{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.fixed li{display:grid;grid-template-columns:64px 1fr;gap:10px;font-size:15px}
+.fixed time{font-weight:800;color:var(--mid)}
+@media (max-width:640px){.b-id .said{grid-template-columns:1fr}.cited ul{grid-template-columns:repeat(2,1fr)}}
 .fixing{margin:14px 0 0;padding-top:14px;border-top:1px solid var(--line);font-weight:700}
 .list{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:14px}
 .list b{display:block;font-size:16px}.list span{color:var(--soft);font-size:15.5px}
@@ -462,13 +476,31 @@ document.addEventListener('selectstart',function(e){if(!ok(e.target.nodeType===1
       </article>
 
       <article class="panel glass b-id tilt" aria-labelledby="h-id">
-        <h3 id="h-id">I ran the test on myself first</h3>
-        <p class="meta">22 October 2026, same wording in each tool</p>
+        <h3 id="h-id">I ran the test on myself. Then I fixed it.</h3>
+        <p class="meta">Same question, same tools, 3 runs each. First run 22 Oct 2026, retested 16 and 18 Nov.</p>
         <div class="q"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Who is Arpit Sharma, the SEO and content specialist at Aqlix IT Solutions?</div>
-        <div class="said"><div><span class="who" style="--c:var(--c-gpt)"><i></i>ChatGPT</span><br><span class="verdict v-mid">Unsure</span></div><p class="voice">Couldn't confirm the SEO person and the profile it found were the same Arpit. Same with memory off.</p></div>
-        <div class="said"><div><span class="who" style="--c:var(--c-gem)"><i></i>Gemini</span><br><span class="verdict v-bad">Missed</span></div><p class="voice">Said there was no public record, and listed three other Arpit Sharmas instead.</p></div>
-        <div class="said"><div><span class="who" style="--c:var(--c-ppx)"><i></i>Perplexity</span><br><span class="verdict v-good">Found me</span></div><p class="voice">Got it right from my LinkedIn profile, but quoted my old About section.</p></div>
-        <p class="fixing">So I'm fixing it in public, starting with this page. Retest: 16 November.</p>
+        <div class="said"><div><span class="who" style="--c:var(--c-gpt)"><i></i>ChatGPT</span><div class="ba"><span class="verdict v-mid">Unsure</span><span class="arr" aria-label="now">&rarr;</span><span class="verdict v-good">Found, 3 of 3</span></div></div><p class="voice">Finds me every time now, but only through LinkedIn. It hasn't used my own site yet.</p></div>
+        <div class="said"><div><span class="who" style="--c:var(--c-gem)"><i></i>Gemini</span><div class="ba"><span class="verdict v-bad">Missed</span><span class="arr" aria-label="now">&rarr;</span><span class="verdict v-good">Found, 3 of 3</span></div></div><p class="voice">Went from listing three other Arpit Sharmas to describing this site, every run.</p></div>
+        <div class="said"><div><span class="who" style="--c:var(--c-ppx)"><i></i>Perplexity</span><div class="ba"><span class="verdict v-mid">Old info</span><span class="arr" aria-label="now">&rarr;</span><span class="verdict v-good">Found, 3 of 3</span></div></div><p class="voice">Now quotes my current profile. One answer in three still says I'm looking for remote roles. I'm not.</p></div>
+        <div class="said"><div><span class="who" style="--c:var(--c-aim)"><i></i>AI Mode</span><div class="ba"><span class="verdict v-bad">Mixed up</span><span class="arr" aria-label="now">&rarr;</span><span class="verdict v-good">Listed first</span></div></div><p class="voice">On 2 Nov it blended me with a Delhi Arpit Sharma. Now, asked "Who is Arpit Sharma SEO", it lists me first, 3 of 3.</p></div>
+        <div class="cited" aria-label="How often each tool cited this website, 18 Nov 2026">
+          <p class="cited-h">Cited my own website (18 Nov)</p>
+          <ul>
+            <li><span>ChatGPT</span><b class="dots" data-n="0"><i></i><i></i><i></i></b><em>0 of 3</em></li>
+            <li><span>Gemini</span><b class="dots" data-n="3"><i></i><i></i><i></i></b><em>3 of 3</em></li>
+            <li><span>Perplexity</span><b class="dots" data-n="3"><i></i><i></i><i></i></b><em>3 of 3</em></li>
+            <li><span>AI Mode</span><b class="dots" data-n="3"><i></i><i></i><i></i></b><em>3 of 3</em></li>
+          </ul>
+        </div>
+        <div class="fixed">
+          <p class="cited-h">What I changed</p>
+          <ol>
+            <li><time>2 Nov</time>Used the same one-line description on LinkedIn, GitHub and this site.</li>
+            <li><time>14 Nov</time>Removed the old services wording AI kept quoting.</li>
+            <li><time>16 Nov</time>Cleaned up my LinkedIn About and Featured text.</li>
+          </ol>
+        </div>
+        <p class="fixing">What a brand can take from this: AI repeats what you write about yourself, almost word for word, and old wording can take days to fade. Next goal: get ChatGPT to cite my own site. Retested every month.</p>
       </article>
 
       <article class="panel glass b-who tilt" aria-labelledby="h-who">
@@ -489,6 +521,7 @@ document.addEventListener('selectstart',function(e){if(!ok(e.target.nodeType===1
         <h3 id="h-log">What this means for your brand</h3>
         <ol class="log" reversed>
           <!-- LOG: newest finding first. Only add findings a business owner can act on. -->
+          <li><time datetime="2026-11-18">18 Nov 2026</time><div><a href="#h-id">Fixing what AI says about you works, slowly</a><p>All 4 AI tools now find me, 3 of 3. Old wording took days to fade, and ChatGPT still only reads LinkedIn.</p></div></li>
           <li><time datetime="2026-11-12">12 Nov 2026</time><div><a href="lab/6-brands-chatgpt-vs-perplexity.html">6 Indian brands: ChatGPT vs Perplexity</a><p>Perplexity named 5 of 6 every time. ChatGPT, 1 of 6. Check both.</p></div></li>
           <li><time datetime="2026-11-11">11 Nov 2026</time><div><a href="lab/6-brands-chatgpt-vs-perplexity.html#named">Named isn't the same as chosen</a><p>One CRM came up in 11 of 12 answers, but usually last and framed as "the telecalling option".</p></div></li>
           <li><time datetime="2026-11-04">4 Nov 2026</time><div><a href="lab/gemini-vs-chatgpt.html">One answer is a screenshot, not a pattern</a><p>Only 1 in 7 of Gemini's cited pages came back in 3 of 5 runs. Always test 3 times.</p></div></li>
@@ -542,7 +575,7 @@ document.addEventListener('selectstart',function(e){if(!ok(e.target.nodeType===1
       <div class="side glass tilt">
         <h3>Coming up on LinkedIn</h3>
         <ul class="upnext">
-          <li><time>24 Nov</time><span>AI mixed me up with another Arpit Sharma. I fixed my profiles. Did it work?</span></li>
+          <li><time>24 Nov</time><span>The full story: how I got 4 AI tools to stop mixing me up with other Arpit Sharmas.</span></li>
           <li><time>26 Nov</time><span>Do Indian brands block ChatGPT? I read 34 robots.txt files.</span></li>
           <li><time>Weekly</time><span>A new category tested. <a href="follow.html">Pick the next one</a></span></li>
         </ul>
@@ -575,7 +608,7 @@ document.addEventListener('selectstart',function(e){if(!ok(e.target.nodeType===1
           <div><dt>Studied</dt><dd>B.Tech, Computer Engineering, LPU (2023)</dd></div>
           <div><dt>Based in</dt><dd>Himachal Pradesh, India</dd></div>
         </dl>
-        <div class="ok"><span class="v-mid">ChatGPT: unsure (22 Oct)</span><span class="v-bad">Gemini: missed</span><span class="v-good">Perplexity: found</span></div>
+        <div class="ok"><span class="v-good">ChatGPT: found (18 Nov)</span><span class="v-good">Gemini: found</span><span class="v-good">Perplexity: found</span><span class="v-good">AI Mode: listed first</span></div>
       </div>
     </div>
   </div>
