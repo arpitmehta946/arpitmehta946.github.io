@@ -1,12 +1,12 @@
 # Arpit Sharma
 
-> Arpit Sharma is an engineer who writes, from Amb, Himachal Pradesh. He runs AI Search Lab, public tests of how ChatGPT, Gemini, Perplexity and Google AI Mode choose which brands to recommend, published weekly on LinkedIn first. He built PayEdd, and currently works on SEO & Content at Aqlix IT Solutions.
+> Arpit Sharma is an engineer who writes, from Amb, Himachal Pradesh. He runs AI Search Lab, public tests of how ChatGPT, Gemini, Perplexity and Google AI Mode choose which brands to recommend, published weekly on LinkedIn first. He built PayEdd, and currently works as a Content Specialist at Aqlix IT Solutions.
 
 - Website: https://arpitmehta946.github.io/
 - Email: arpitmehtam@gmail.com
 - LinkedIn: https://www.linkedin.com/in/arpitsharmaoff
 - GitHub: https://github.com/arpitmehta946
-- Works at: Aqlix IT Solutions (SEO & Content)
+- Works at: Aqlix IT Solutions (Content Specialist, since Sep 2026)
 - Built: PayEdd, a payroll app (2025)
 - Certified: Apple Ads (Apple, 2026), Google Analytics (Google Skillshop, 2026)
 - Education: B.Tech in Computer Engineering, Lovely Professional University (2019 to 2023)

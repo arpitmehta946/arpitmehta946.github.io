@@ -1,0 +1,43 @@
+name: IndexNow ping
+# Tells Bing (and other IndexNow search engines) which pages changed, right after each publish.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: Wait for GitHub Pages to deploy
+        run: sleep 90
+      - name: Build URL list and ping IndexNow
+        env:
+          HOST: arpitmehta946.github.io
+          KEY: b3bdd92e594502eb6c6bd4da5a781de4
+        run: |
+          set -e
+          BASE="https://$HOST"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || ! git rev-parse HEAD~1 >/dev/null 2>&1; then
+            FILES=$(git ls-files '*.html')
+          else
+            FILES=$(git diff --name-only HEAD~1 HEAD -- '*.html' 'llms.txt' 'sitemap.xml')
+          fi
+          URLS=""
+          for f in $FILES; do
+            case "$f" in
+              google*.html|services.html) continue ;;
+              index.html) u="$BASE/" ;;
+              *) u="$BASE/$f" ;;
+            esac
+            URLS="$URLS\"$u\","
+          done
+          if [ -z "$URLS" ]; then echo "No page changes to report."; exit 0; fi
+          URLS="[${URLS%,}]"
+          echo "Pinging: $URLS"
+          BODY="{\"host\":\"$HOST\",\"key\":\"$KEY\",\"keyLocation\":\"$BASE/$KEY.txt\",\"urlList\":$URLS}"
+          CODE=$(curl -s -o /tmp/r.txt -w '%{http_code}' -X POST https://api.indexnow.org/indexnow -H 'Content-Type: application/json; charset=utf-8' -d "$BODY")
+          echo "IndexNow response: $CODE"; cat /tmp/r.txt || true
+          case "$CODE" in 200|202) ;; *) exit 1 ;; esac
