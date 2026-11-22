@@ -198,7 +198,8 @@ document.addEventListener('selectstart',function(e){if(!ok(e.target.nodeType===1
         <p class="locked" aria-live="polite"></p>
       </div>
       <ol class="tl">
-        <li class="next"><time>26 Nov 2026</time><b>Do Indian brands block ChatGPT?</b><span>I read the robots.txt files of 34 brands. Make your guess above, then see the answer.</span></li>
+        <li class="next"><time>3 Dec 2026</time><b>Do Indian brands block ChatGPT?</b><span>I read the robots.txt files of 34 brands. Make your guess above, then see the answer.</span></li>
+        <li class="next"><time>26 Nov 2026</time><b>One new page, four days, cited by Google's AI.</b><span>The About page I added on 18 Nov was in Google AI Mode's sources by 22 Nov. <a href="./#h-id">See the retest</a></span></li>
         <li class="next"><time>20 Nov 2026</time><b>AI mixed me up with another person. Fixing it worked, slowly.</b><span>Retested 16 and 18 Nov: all 4 AI tools now find me, 3 of 3. <a href="./#h-id">See the before and after</a></span></li>
         <li><time>12 Nov 2026</time><b>6 Indian brands, two AI tools</b><span>Perplexity named 5 of 6 every time. ChatGPT, 1 of 6. <a href="lab/6-brands-chatgpt-vs-perplexity.html">See the results</a></span></li>
         <li><time>11 Nov 2026</time><b>Named isn't the same as chosen</b><span>A CRM came up in 11 of 12 answers, but usually last.</span></li>
@@ -236,7 +237,7 @@ document.addEventListener('selectstart',function(e){if(!ok(e.target.nodeType===1
 
     <section class="final" aria-labelledby="h-final">
       <h2 id="h-final">Don't miss the next result.</h2>
-      <p class="intro">The next test lands on LinkedIn on 26 Nov: do Indian brands block ChatGPT? Follow the AI Search Lab to see it first.</p>
+      <p class="intro">The next test lands on LinkedIn on 3 Dec: do Indian brands block ChatGPT? Follow the AI Search Lab to see it first.</p>
       <div class="row">
         <a class="btn ink" href="https://www.linkedin.com/in/arpitsharmaoff" rel="me">Follow the lab</a>
         <a class="btn ghost" href="self-check.html">Start the free self-check</a>
@@ -252,7 +253,7 @@ document.addEventListener('selectstart',function(e){if(!ok(e.target.nodeType===1
   document.querySelectorAll('[data-guess]').forEach(function(box){
     var btns=box.querySelectorAll('button'), out=box.querySelector('.locked');
     function show(v){btns.forEach(function(b){b.setAttribute('aria-pressed', b.dataset.v===v?'true':'false')});
-      if(v){out.textContent='Locked in: '+v+'. The answer goes up on LinkedIn on 26 Nov. Come back and see if you were right.'}}
+      if(v){out.textContent='Locked in: '+v+'. The answer goes up on LinkedIn on 3 Dec. Come back and see if you were right.'}}
     var saved=null; try{saved=localStorage.getItem(KEY)}catch(e){}
     if(saved) show(saved);
     btns.forEach(function(b){b.addEventListener('click',function(){show(b.dataset.v); try{localStorage.setItem(KEY,b.dataset.v)}catch(e){}})});
