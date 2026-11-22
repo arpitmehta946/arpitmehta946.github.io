@@ -34,10 +34,11 @@ The site and posts are light-first. Dark is used in bands, never as the whole pa
 ## Page rhythm (website, final 22 Nov)
 
 1. Every page opens dark: Shyam `#17121A` with a soft Gulal glow (home hero, inner page headers).
-2. Everything after is clean white `#FFFFFF`, alternating with Petal `#FBF2F4` sections.
-3. The key word of the main headline gets a Gulal underline (thickness about 0.11em), not pink text.
-4. Gulal only on: the underline, the main button, key links, the key number.
-5. On light backgrounds, data labels use darker shades: good `#0B7A5C`, bad `#B83E1A`, ChatGPT text `#0B7A5C`, Perplexity text `#0E7287`.
+2. Home page alternates dark and light down the page: dark for proof and action (hero, test results, weekly test, contact + footer), light Petal `#FBF2F4` with white cards for explaining (method, pain points, about, FAQ).
+3. Short inner pages: dark header, light Petal body, one dark box near the end.
+4. The key word of the main headline gets a Gulal underline (thickness about 0.11em), not pink text.
+5. Gulal only on: the underline, the main button, key links, the key number.
+6. On light backgrounds, data labels use darker shades: good `#0B7A5C`, bad `#B83E1A`, ChatGPT text `#0B7A5C`, Perplexity text `#0E7287`.
 
 ## Data colours (charts only)
 
