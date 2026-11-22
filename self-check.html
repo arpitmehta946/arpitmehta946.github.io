@@ -188,7 +188,9 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--cite);outline-offse
 /* ===== Lab-at-night theme (shared with homepage, 14 Nov 2026) ===== */
 </style>
 <!-- No-copy: blocks casual selecting/copying. Inputs, code samples and the email stay usable. -->
-<style>body{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}input,textarea,code,.mail,.copyable{-webkit-user-select:text;user-select:text}img{-webkit-user-drag:none;user-drag:none}</style>
+<style>body{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}input,textarea,code,.mail,.copyable{-webkit-user-select:text;user-select:text}img{-webkit-user-drag:none;user-drag:none}
+h1 mark{background:none!important;color:inherit!important;padding:0!important;text-decoration:underline;text-decoration-color:#C4245A;text-decoration-thickness:.11em;text-underline-offset:.09em;text-decoration-skip-ink:none}
+</style>
 <script>(function(){function ok(t){return t&&t.closest&&t.closest('input,textarea,code,.mail,.copyable')}
 ['copy','cut'].forEach(function(ev){document.addEventListener(ev,function(e){if(!ok(e.target)&&!ok(document.activeElement))e.preventDefault()})});
 document.addEventListener('dragstart',function(e){if(e.target.tagName==='IMG')e.preventDefault()});

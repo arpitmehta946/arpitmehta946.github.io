@@ -389,6 +389,41 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;margin
 #proof a{color:#F08DB0}#proof a:hover{color:#fff}
 #proof + section{padding-top:130px}
 #proof .check .btn{background:var(--grad);color:#fff;box-shadow:0 12px 30px -12px rgba(224,69,122,.7)}
+
+/* ===== Brand layout (22 Nov): dark opening, clean white page, Gulal underline ===== */
+/* B: Clean white - calm, premium, Gulal only on the one key thing */
+body{background:#FFFFFF!important;background-image:none!important}
+.top{background:rgba(255,255,255,.92)!important}
+.hero .floor{display:none}
+.glass{background:#FFFFFF!important;box-shadow:0 1px 0 rgba(36,16,28,.04),0 18px 40px -28px rgba(36,16,28,.25)!important;border-color:#EFE3E8!important}
+section:nth-of-type(even):not(#proof){background:#FBF2F4}
+h1 .tool{background:none!important;-webkit-background-clip:initial!important;background-clip:initial!important;color:#C4245A!important}
+.btn.p{background:#C4245A!important;box-shadow:none!important}
+.btn.p:hover{background:#A81E4D!important}
+#proof{background:#17121A}
+#proof .glass{background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.025)),#1F1823!important;border-color:rgba(255,214,230,.13)!important;box-shadow:0 30px 60px -30px rgba(0,0,0,.65)!important}
+h1 .tool{background:none!important;-webkit-background-clip:initial!important;background-clip:initial!important;color:#24101C!important;
+  text-decoration:underline;text-decoration-color:#C4245A;text-decoration-thickness:.11em;text-underline-offset:.09em;text-decoration-skip-ink:none}
+.top{background:rgba(23,18,26,.94)!important;border-bottom-color:rgba(255,214,230,.12)!important}
+.top .brand,.top a:not(.btn){color:#F8EEF3!important}
+.hero{background:#17121A!important;color:#F8EEF3;padding-bottom:90px!important;
+  background-image:radial-gradient(900px 520px at 85% 10%,rgba(196,36,90,.26),transparent 62%),radial-gradient(700px 500px at 0% 100%,rgba(196,36,90,.10),transparent 60%)!important;
+  --ink:#F8EEF3;--soft:#D9C6D0;--muted:#ADA0A9;--line:rgba(255,214,230,.14);--line-2:rgba(255,214,230,.28);--glass:linear-gradient(160deg,rgba(255,255,255,.08),rgba(255,255,255,.03))}
+.hero .glass,.hero .aic{background:var(--glass),#211A24!important;border-color:rgba(255,214,230,.14)!important;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)!important}
+.hero a:not(.btn){color:#F08DB0}
+.hero .btn.line{background:transparent!important;color:#F8EEF3!important;border-color:rgba(248,238,243,.35)!important}
+.hero h1 .tool{color:#F8EEF3!important;text-decoration-color:#EC5C8E!important}
+#proof{background:#FFFFFF!important;background-image:none!important;--ink:#24101C;--soft:#4A3542;--muted:#64485A;--line:rgba(120,40,80,.13);--line-2:rgba(120,40,80,.24)}
+#proof .glass{background:#FFFFFF!important;border-color:#EFE3E8!important;box-shadow:0 1px 0 rgba(36,16,28,.04),0 18px 40px -28px rgba(36,16,28,.25)!important}
+#proof a{color:#C4245A}
+
+
+/* Light-page data text: darker shades so labels pass contrast on white */
+:root{--mid:#C4245A}
+.hero{--mid:#F4A3BF}
+.v-good{color:#0B7A5C!important}.v-bad{color:#B83E1A!important}.v-mid{color:#C4245A!important}
+.vs .g b{color:#0B7A5C!important}.vs .p b{color:#0E7287!important}
+.vs .px b{color:#0E7287!important}.pulse{color:#C4245A!important}.soon time,.side time,.next time{color:#C4245A!important}
 </style>
 <script>(function(){function ok(t){return t&&t.closest&&t.closest('input,textarea,code,.mail,.copyable')}
 ['copy','cut'].forEach(function(ev){document.addEventListener(ev,function(e){if(!ok(e.target)&&!ok(document.activeElement))e.preventDefault()})});
