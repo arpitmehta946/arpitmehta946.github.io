@@ -62,3 +62,7 @@ The site and posts are light-first. Dark is used in bands, never as the whole pa
 5. Don't use orange, blue or teal as brand colours (they belong to the tools and platforms).
 
 Tokens for code: [`brand.css`](brand.css).
+
+## Brand images (share image, charts, post images)
+
+Same rhythm as the site: a dark Shyam band on top with the kicker (Gulal light) and the headline, then a Petal body with white cards (border `#EAD9E0`), dark ink text, Gulal only on the key number, and at most one dark callout card. Footer: "Arpit Sharma, an engineer who writes" plus the site address. Sizes: share image 1200x630, charts and post images 1080x1350.
