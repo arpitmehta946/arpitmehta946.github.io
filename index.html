@@ -429,6 +429,22 @@ h1 .tool{background:none!important;-webkit-background-clip:initial!important;bac
 .check{background:#17121A!important;border-color:#33283A!important;color:#F8EEF3}
 .check *{color:#F8EEF3}.check p,.check span{color:#CDBFC8!important}
 .check .btn{background:var(--grad)!important;color:#fff!important}
+
+/* Alternating rhythm (22 Nov): dark / light down the page */
+#proof,#work,.contact{background:#17121A!important;color:#F8EEF3;padding-top:110px!important;padding-bottom:120px!important;margin-top:0!important;
+  background-image:radial-gradient(900px 520px at 88% 0%,rgba(196,36,90,.20),transparent 62%),radial-gradient(700px 500px at 0% 100%,rgba(196,36,90,.08),transparent 60%)!important;
+  --ink:#F8EEF3;--soft:#D9C6D0;--muted:#ADA0A9;--line:rgba(255,214,230,.13);--line-2:rgba(255,214,230,.24);--mid:#F4A3BF;
+  --glass:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.025));--shadow:0 30px 60px -30px rgba(0,0,0,.65)}
+#proof .glass,#work .glass,.contact .glass{background:var(--glass),#1F1823!important;border-color:rgba(255,214,230,.13)!important;box-shadow:0 30px 60px -30px rgba(0,0,0,.65)!important}
+#proof a:not(.btn),#work a:not(.btn),.contact a:not(.btn){color:#F08DB0}
+#proof .btn.line,#work .btn.line,.contact .btn.line{background:transparent!important;color:#F8EEF3!important;border-color:rgba(248,238,243,.35)!important}
+#proof .v-good,#work .v-good,.contact .v-good,#proof .vs .g b,#work .vs .g b,.contact .vs .g b{color:#41E2A8!important}
+#proof .v-bad,#work .v-bad,.contact .v-bad{color:#FF8B5E!important}
+#proof .v-mid,#work .v-mid,.contact .v-mid,#proof .pulse,#work .pulse,.contact .pulse,#proof time,#work time,.contact time{color:#F4A3BF!important}
+#proof .vs .px b,#work .vs .px b,.contact .vs .px b{color:#2FD3EE!important}
+#proof .check,#work .check,.contact .check{background:linear-gradient(150deg,rgba(244,163,191,.14),rgba(196,36,90,.10))!important;border-color:rgba(244,163,191,.3)!important}
+section:not(.hero):not(#proof):not(#work):not(.contact){padding-top:110px;padding-bottom:110px}
+footer{background:#17121A;color:#ADA0A9}
 </style>
 <script>(function(){function ok(t){return t&&t.closest&&t.closest('input,textarea,code,.mail,.copyable')}
 ['copy','cut'].forEach(function(ev){document.addEventListener(ev,function(e){if(!ok(e.target)&&!ok(document.activeElement))e.preventDefault()})});
