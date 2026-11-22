@@ -19,7 +19,7 @@ Decided 22 November 2026. Signature colour: **Gulal #C4245A**.
 
 ## Dark band: test results and proof sections only
 
-The site and posts are light-first. Dark is used in bands, never as the whole page: the home page proof section, inner page headers, and "Check your own brand" boxes. The dark is a neutral near-black with a hint of plum, not maroon.
+The site and posts are light-first. Dark is used in bands, never as the whole page: the opening section of every page and the "Check your own brand" boxes. The dark is a neutral near-black with a hint of plum, not maroon.
 
 | Role | Name | Hex |
 |---|---|---|
@@ -31,9 +31,13 @@ The site and posts are light-first. Dark is used in bands, never as the whole pa
 | Links and labels on dark | Gulal light | `#F08DB0` |
 | Gradient (buttons) | | `#9E1C48` to `#C4245A` to `#E0457A` |
 
-## Page rhythm (website)
+## Page rhythm (website, final 22 Nov)
 
-Light Petal for most sections, one dark Shyam band for the proof, Gulal only for the key number, the main button and underlines, and a soft Gulal tint (`#F9D3E0`) for highlights.
+1. Every page opens dark: Shyam `#17121A` with a soft Gulal glow (home hero, inner page headers).
+2. Everything after is clean white `#FFFFFF`, alternating with Petal `#FBF2F4` sections.
+3. The key word of the main headline gets a Gulal underline (thickness about 0.11em), not pink text.
+4. Gulal only on: the underline, the main button, key links, the key number.
+5. On light backgrounds, data labels use darker shades: good `#0B7A5C`, bad `#B83E1A`, ChatGPT text `#0B7A5C`, Perplexity text `#0E7287`.
 
 ## Data colours (charts only)
 
