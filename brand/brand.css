@@ -4,9 +4,9 @@
   --gulal:#C4245A; --gulal-tint:#F9D3E0;
   --petal:#FBF2F4; --ink:#24101C; --plum-grey:#64485A; --blush-line:#EAD9E0;
   /* dark */
-  --shyam:#150A11; --shyam-2:#241320; --conch:#F8EEF3; --rose-mist:#D9C6D0; --dusk-mauve:#A38D99;
+  --shyam:#17121A; --shyam-2:#241C27; --shyam-3:#33283A; --conch:#F8EEF3; --rose-mist:#CDBFC8;
   --gulal-bright:#EC5C8E; --gulal-light:#F08DB0; --gulal-pale:#F4A3BF; --on-pale:#1A0B14;
-  --gulal-grad:linear-gradient(115deg,#C4245A 0%,#E0457A 50%,#F4A3BF 100%);
+  --gulal-grad:linear-gradient(115deg,#9E1C48 0%,#C4245A 50%,#E0457A 100%);
   /* data */
   --good:#41E2A8; --bad:#FF8B5E;
   --c-gpt:#19D3A2; --c-gem:#6F9CFF; --c-ppx:#2FD3EE; --c-aim:#B78CFF;
