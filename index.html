@@ -392,11 +392,11 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;margin
 
 /* ===== Brand layout (22 Nov): dark opening, clean white page, Gulal underline ===== */
 /* B: Clean white - calm, premium, Gulal only on the one key thing */
-body{background:#FFFFFF!important;background-image:none!important}
+body{background:#FBF2F4!important;background-image:none!important}
 .top{background:rgba(255,255,255,.92)!important}
 .hero .floor{display:none}
-.glass{background:#FFFFFF!important;box-shadow:0 1px 0 rgba(36,16,28,.04),0 18px 40px -28px rgba(36,16,28,.25)!important;border-color:#EFE3E8!important}
-section:nth-of-type(even):not(#proof){background:#FBF2F4}
+.glass{background:#FFFFFF!important;box-shadow:0 1px 0 rgba(36,16,28,.04),0 18px 40px -28px rgba(36,16,28,.25)!important;border-color:#EAD9E0!important}
+
 h1 .tool{background:none!important;-webkit-background-clip:initial!important;background-clip:initial!important;color:#C4245A!important}
 .btn.p{background:#C4245A!important;box-shadow:none!important}
 .btn.p:hover{background:#A81E4D!important}
@@ -413,8 +413,8 @@ h1 .tool{background:none!important;-webkit-background-clip:initial!important;bac
 .hero a:not(.btn){color:#F08DB0}
 .hero .btn.line{background:transparent!important;color:#F8EEF3!important;border-color:rgba(248,238,243,.35)!important}
 .hero h1 .tool{color:#F8EEF3!important;text-decoration-color:#EC5C8E!important}
-#proof{background:#FFFFFF!important;background-image:none!important;--ink:#24101C;--soft:#4A3542;--muted:#64485A;--line:rgba(120,40,80,.13);--line-2:rgba(120,40,80,.24)}
-#proof .glass{background:#FFFFFF!important;border-color:#EFE3E8!important;box-shadow:0 1px 0 rgba(36,16,28,.04),0 18px 40px -28px rgba(36,16,28,.25)!important}
+#proof{background:transparent!important;background-image:none!important;--ink:#24101C;--soft:#4A3542;--muted:#64485A;--line:rgba(120,40,80,.13);--line-2:rgba(120,40,80,.24)}
+#proof .glass{background:#FFFFFF!important;border-color:#EAD9E0!important;box-shadow:0 1px 0 rgba(36,16,28,.04),0 18px 40px -28px rgba(36,16,28,.25)!important}
 #proof a{color:#C4245A}
 
 
@@ -424,6 +424,11 @@ h1 .tool{background:none!important;-webkit-background-clip:initial!important;bac
 .v-good{color:#0B7A5C!important}.v-bad{color:#B83E1A!important}.v-mid{color:#C4245A!important}
 .vs .g b{color:#0B7A5C!important}.vs .p b{color:#0E7287!important}
 .vs .px b{color:#0E7287!important}.pulse{color:#C4245A!important}.soon time,.side time,.next time{color:#C4245A!important}
+
+/* Colour rhythm (same as brand images): dark band on top, petal page, white cards, one dark callout */
+.check{background:#17121A!important;border-color:#33283A!important;color:#F8EEF3}
+.check *{color:#F8EEF3}.check p,.check span{color:#CDBFC8!important}
+.check .btn{background:var(--grad)!important;color:#fff!important}
 </style>
 <script>(function(){function ok(t){return t&&t.closest&&t.closest('input,textarea,code,.mail,.copyable')}
 ['copy','cut'].forEach(function(ev){document.addEventListener(ev,function(e){if(!ok(e.target)&&!ok(document.activeElement))e.preventDefault()})});
