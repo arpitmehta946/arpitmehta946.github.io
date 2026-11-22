@@ -262,6 +262,7 @@ section{padding:130px 0 0}
 .cited li span{font-weight:700}.cited em{font-style:normal;color:var(--soft);font-size:13px}
 .dots{display:flex;gap:5px}.dots i{width:12px;height:12px;border-radius:50%;border:1.5px solid rgba(214,224,255,.35)}
 .dots[data-n="3"] i{background:var(--good);border-color:var(--good);box-shadow:0 0 8px rgba(65,226,168,.5)}
+.dots[data-n="2"] i:nth-child(-n+2){background:var(--good);border-color:var(--good);box-shadow:0 0 8px rgba(65,226,168,.5)}
 .dots[data-n="0"] i{border-style:dashed;border-color:var(--bad)}
 .fixed ol{list-style:none;margin:0;padding:0;display:grid;gap:8px}
 .fixed li{display:grid;grid-template-columns:64px 1fr;gap:10px;font-size:15px}
@@ -480,17 +481,17 @@ document.addEventListener('selectstart',function(e){if(!ok(e.target.nodeType===1
 
       <article class="panel glass b-id tilt" aria-labelledby="h-id">
         <h3 id="h-id">I ran the test on myself. Then I fixed it.</h3>
-        <p class="meta">Same question, same tools, 3 runs each. First run 22 Oct 2026, retested 16 and 18 Nov.</p>
+        <p class="meta">Same question, same tools, 3 runs each. First run 22 Oct 2026, retested 16, 18 and 22 Nov.</p>
         <div class="q"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Who is Arpit Sharma, the SEO and content specialist at Aqlix IT Solutions?</div>
-        <div class="said"><div><span class="who" style="--c:var(--c-gpt)"><i></i>ChatGPT</span><div class="ba"><span class="verdict v-mid">Unsure</span><span class="arr" aria-label="now">&rarr;</span><span class="verdict v-good">Found, 3 of 3</span></div></div><p class="voice">Finds me every time now, but mostly through LinkedIn. It hasn't used my own site yet.</p></div>
-        <div class="said"><div><span class="who" style="--c:var(--c-gem)"><i></i>Gemini</span><div class="ba"><span class="verdict v-bad">Missed</span><span class="arr" aria-label="now">&rarr;</span><span class="verdict v-good">Found, 3 of 3</span></div></div><p class="voice">Went from listing three other Arpit Sharmas to describing this site, every run.</p></div>
-        <div class="said"><div><span class="who" style="--c:var(--c-ppx)"><i></i>Perplexity</span><div class="ba"><span class="verdict v-mid">Old info</span><span class="arr" aria-label="now">&rarr;</span><span class="verdict v-good">Found, 3 of 3</span></div></div><p class="voice">Now quotes my current profile. One answer in three still says I'm looking for remote roles. I'm not.</p></div>
-        <div class="said"><div><span class="who" style="--c:var(--c-aim)"><i></i>AI Mode</span><div class="ba"><span class="verdict v-bad">Mixed up</span><span class="arr" aria-label="now">&rarr;</span><span class="verdict v-good">Listed first</span></div></div><p class="voice">On 2 Nov it blended me with a Delhi Arpit Sharma. Now, asked "Who is Arpit Sharma SEO", it lists me first, 3 of 3.</p></div>
-        <div class="cited" aria-label="How often each tool cited this website, 18 Nov 2026">
-          <p class="cited-h">Cited my own website (18 Nov)</p>
+        <div class="said"><div><span class="who" style="--c:var(--c-gpt)"><i></i>ChatGPT</span><div class="ba"><span class="verdict v-mid">Unsure</span><span class="arr" aria-label="now">&rarr;</span><span class="verdict v-good">Found, 3 of 3</span></div></div><p class="voice">Finds me every time, but only through LinkedIn. Still hasn't used my own site (0 of 3 on 22 Nov).</p></div>
+        <div class="said"><div><span class="who" style="--c:var(--c-gem)"><i></i>Gemini</span><div class="ba"><span class="verdict v-bad">Missed</span><span class="arr" aria-label="now">&rarr;</span><span class="verdict v-good">Found when it searches</span></div></div><p class="voice">When it searches the web, it describes this site and repeats my About page. On 22 Nov it skipped searching in 3 of 5 runs and couldn't find me.</p></div>
+        <div class="said"><div><span class="who" style="--c:var(--c-ppx)"><i></i>Perplexity</span><div class="ba"><span class="verdict v-mid">Old info</span><span class="arr" aria-label="now">&rarr;</span><span class="verdict v-good">Found, 3 of 3</span></div></div><p class="voice">Quotes my current profile. One answer in three still says I'm looking for remote roles; its only source is my own LinkedIn. I'm not.</p></div>
+        <div class="said"><div><span class="who" style="--c:var(--c-aim)"><i></i>AI Mode</span><div class="ba"><span class="verdict v-bad">Mixed up</span><span class="arr" aria-label="now">&rarr;</span><span class="verdict v-good">Listed first</span></div></div><p class="voice">On 2 Nov it blended me with a Delhi Arpit Sharma. Now it lists me first, 3 of 3, and cites my new About page.</p></div>
+        <div class="cited" aria-label="How often each tool cited this website, 22 Nov 2026">
+          <p class="cited-h">Cited my own website (22 Nov)</p>
           <ul>
             <li><span>ChatGPT</span><b class="dots" data-n="0"><i></i><i></i><i></i></b><em>0 of 3</em></li>
-            <li><span>Gemini</span><b class="dots" data-n="3"><i></i><i></i><i></i></b><em>3 of 3</em></li>
+            <li><span>Gemini</span><b class="dots" data-n="2"><i></i><i></i><i></i><i></i><i></i></b><em>2 of 5</em></li>
             <li><span>Perplexity</span><b class="dots" data-n="3"><i></i><i></i><i></i></b><em>3 of 3</em></li>
             <li><span>AI Mode</span><b class="dots" data-n="3"><i></i><i></i><i></i></b><em>3 of 3</em></li>
           </ul>
@@ -501,9 +502,10 @@ document.addEventListener('selectstart',function(e){if(!ok(e.target.nodeType===1
             <li><time>2 Nov</time>Used the same one-line description on LinkedIn, GitHub and this site.</li>
             <li><time>14 Nov</time>Removed the old services wording AI kept quoting.</li>
             <li><time>16 Nov</time>Cleaned up my LinkedIn About and Featured text.</li>
+            <li><time>18 Nov</time>Added an About page that says who I am, and who I'm not. By 22 Nov, Google AI Mode cited it in 3 of 3 runs.</li>
           </ol>
         </div>
-        <p class="fixing">What a brand can take from this: AI repeats what you write about yourself, almost word for word, and old wording can take days to fade. Next goal: get ChatGPT to cite my own site. Retested every month.</p>
+        <p class="fixing">What a brand can take from this: AI repeats what you write about yourself, almost word for word. A clear new page gets picked up in days; an old line can stick for weeks. Next goal: get ChatGPT to cite my own site. Retested every month.</p>
       </article>
 
       <article class="panel glass b-who tilt" aria-labelledby="h-who">
@@ -641,7 +643,7 @@ document.addEventListener('selectstart',function(e){if(!ok(e.target.nodeType===1
     </div>
     <footer>
       <span>© 2026 Arpit Sharma · <a href="about.html">About Arpit Sharma</a> · <a href="https://github.com/arpitmehta946" rel="me">GitHub</a></span>
-      <span>Last updated <time datetime="2026-11-18">18 November 2026</time></span>
+      <span>Last updated <time datetime="2026-11-22">22 November 2026</time></span>
     </footer>
   </div>
 </section>
