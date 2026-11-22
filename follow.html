@@ -120,7 +120,11 @@ footer{padding:40px 0;font-size:15px;color:var(--muted);text-align:center}
 .btn.y{background:#C4245A!important;color:#fff!important}.get li::before,.tl li.next b::after{color:#fff!important}header .btn.line,.pick .btn.line,.cta .btn.line{border-color:rgba(248,238,243,.4)!important;color:#F8EEF3!important}.btn.ink{background:#24101C!important;color:#fff!important}mark{background:#F9D3E0;color:#24101C}
 </style>
 <!-- No-copy: blocks casual selecting/copying. Inputs, code samples and the email stay usable. -->
-<style>body{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}input,textarea,code,.mail,.copyable{-webkit-user-select:text;user-select:text}img{-webkit-user-drag:none;user-drag:none}</style>
+<style>body{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}input,textarea,code,.mail,.copyable{-webkit-user-select:text;user-select:text}img{-webkit-user-drag:none;user-drag:none}
+/* Dark footer band (matches home) */
+footer{background:#17121A!important;color:#ADA0A9!important;box-shadow:0 0 0 100vmax #17121A;clip-path:inset(0 -100vmax -100vmax);border-top:0!important;padding-top:34px!important;padding-bottom:40px!important}
+footer a{color:#F08DB0!important}footer *{color:inherit}
+</style>
 <script>(function(){function ok(t){return t&&t.closest&&t.closest('input,textarea,code,.mail,.copyable')}
 ['copy','cut'].forEach(function(ev){document.addEventListener(ev,function(e){if(!ok(e.target)&&!ok(document.activeElement))e.preventDefault()})});
 document.addEventListener('dragstart',function(e){if(e.target.tagName==='IMG')e.preventDefault()});

@@ -190,6 +190,19 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--cite);outline-offse
 <!-- No-copy: blocks casual selecting/copying. Inputs, code samples and the email stay usable. -->
 <style>body{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}input,textarea,code,.mail,.copyable{-webkit-user-select:text;user-select:text}img{-webkit-user-drag:none;user-drag:none}
 h1 mark{background:none!important;color:inherit!important;padding:0!important;text-decoration:underline;text-decoration-color:#C4245A;text-decoration-thickness:.11em;text-underline-offset:.09em;text-decoration-skip-ink:none}
+
+/* Dark opening band + dark footer (matches every page) */
+.mast,.hero{background:#17121A;box-shadow:0 0 0 100vmax #17121A;--ink:#F8EEF3;--ink2:#CDBFC8;--rule:rgba(255,214,230,.16);color:#F8EEF3}
+.mast{clip-path:inset(-48px -100vmax -36px)}
+.hero{clip-path:inset(-36px -100vmax -56px)}
+.mast .label,.hero .label{color:#F08DB0!important}
+.mast i{background:#C4245A;color:#fff}
+.hero .lede{color:#CDBFC8!important}
+.hero .toc a{color:#F8EEF3!important;border-color:rgba(255,214,230,.3)!important;background:transparent!important}
+.hero h1 mark{color:#F8EEF3!important;text-decoration-color:#EC5C8E!important}
+.hero .answer{--ink:#24101C;--ink2:#64485A;--rule:#EAD9E0;color:#24101C;background:#FFFFFF}
+.fine{background:#17121A;color:#ADA0A9!important;box-shadow:0 0 0 100vmax #17121A;clip-path:inset(0 -100vmax -100vmax);border-top:0!important;padding-top:28px}
+.fine a{color:#F08DB0!important}
 </style>
 <script>(function(){function ok(t){return t&&t.closest&&t.closest('input,textarea,code,.mail,.copyable')}
 ['copy','cut'].forEach(function(ev){document.addEventListener(ev,function(e){if(!ok(e.target)&&!ok(document.activeElement))e.preventDefault()})});
