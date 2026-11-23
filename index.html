@@ -188,13 +188,13 @@ section{padding:130px 0 0}
 /* ===== METHOD: exploded 3D layers ===== */
 .method{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:40px;align-items:center;margin-top:30px}
 .layers{position:relative;height:560px}
-.layers .scene{position:absolute;left:50%;top:58%;width:340px;height:220px;margin:-110px 0 0 -170px;transform-style:preserve-3d;transform:rotateX(58deg) rotateZ(-36deg)}
+.layers .scene{position:absolute;left:50%;top:73%;width:340px;height:180px;margin:-90px 0 0 -170px;transform-style:preserve-3d;transform:rotateX(58deg) rotateZ(-36deg)}
 .plate{position:absolute;inset:0;border-radius:22px;transform-style:preserve-3d;transform:translateZ(var(--z));padding:18px 20px;
   background:linear-gradient(150deg,rgba(255,255,255,0.92),rgba(255,255,255,0.92));border:1px solid rgba(120,40,80,0.3);
   box-shadow:0 0 0 1px rgba(196,36,90,.05),-30px 40px 60px -20px rgba(80,20,50,0.13),inset 0 1px 0 rgba(255,255,255,.14);animation:hover 5s ease-in-out infinite;animation-delay:var(--d)}
 .plate::after{content:"";position:absolute;inset:0;border-radius:inherit;transform:translateZ(-8px);background:rgba(255,255,255,0.95);border:1px solid rgba(120,40,80,0.18)}
 @keyframes hover{50%{transform:translateZ(calc(var(--z) + 14px))}}
-.plate .pl{position:relative;z-index:2;white-space:nowrap;font-size:13px;color:var(--muted);font-weight:600;margin:0 0 10px}
+.plate .pl{position:relative;z-index:2;white-space:nowrap;font-size:14px;color:var(--muted);font-weight:600;margin:0 0 10px}
 .plate.p1 .field{border-radius:12px;background:rgba(196,36,90,.05);border:1px solid var(--line-2);padding:12px 14px;font-family:var(--voice);font-style:italic;color:var(--ink);font-size:17px}
 .plate.p2 .gridr{display:grid;grid-template-columns:90px repeat(3,1fr);gap:7px 8px;align-items:center;font-size:12.5px;color:var(--soft)}
 .plate.p2 i{height:20px;border-radius:6px;background:var(--c);opacity:.85;box-shadow:0 0 10px -2px var(--c)}
@@ -216,7 +216,7 @@ section{padding:130px 0 0}
 .b-id{grid-column:span 7}
 .b-who{grid-column:span 5}
 .b-log{grid-column:span 7}
-.b-85{grid-column:span 5;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(160deg,rgba(244,163,191,.18),rgba(255,255,255,0.85))}
+.b-85{grid-column:span 5;display:flex;flex-direction:column;justify-content:center;gap:8px;background:linear-gradient(160deg,rgba(244,163,191,.18),rgba(255,255,255,0.85))}
 .vs{display:flex;gap:16px;margin:22px 0 14px;flex-wrap:wrap}
 .vs div{flex:1;min-width:140px;padding:16px 18px;border-radius:16px;background:rgba(196,36,90,.05);border:1px solid var(--line)}
 .vs b{display:block;font-size:56px;line-height:1;letter-spacing:-.04em;font-weight:800}
@@ -369,7 +369,7 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;margin
   .flow{transform:scale(.8) rotateX(6deg)}
   .aic[data-pos="1"]{transform:translate3d(120px,-18px,-140px) rotateY(-34deg)}
   .aic[data-pos="3"]{transform:translate3d(-120px,-18px,-140px) rotateY(34deg)}
-  .layers{height:380px}.vs b{font-size:40px;white-space:nowrap}.layers .scene{top:50%;transform:scale(.78) rotateX(58deg) rotateZ(-36deg)}
+  .vs b{font-size:40px;white-space:nowrap}
   .iso{height:300px;margin:0 -16px}.iso .plane{transform:scale(.56) rotateX(60deg) rotateZ(-24deg)}
   .said,.log li{grid-template-columns:1fr;gap:6px}
   .panel{padding:22px}
@@ -457,8 +457,11 @@ footer{background:#17121A;color:#ADA0A9}
 @media (min-width:701px) and (max-width:1024px){
  section:not(.hero){padding-top:88px!important;padding-bottom:88px!important}
 }
-@media (max-width:1024px){.layers{height:450px!important}}
-@media (max-width:700px){.layers{height:290px!important}}
+.b-85 .huge{line-height:1;margin:0 0 10px}
+@media (min-width:641px) and (max-width:1024px){.kp{transform:rotateY(-8deg) rotateX(4deg)}}
+@media (max-width:1024px){.layers{height:500px}.layers .scene{top:72%;transform:scale(.86) rotateX(58deg) rotateZ(-36deg)}}
+@media (max-width:700px){.layers{height:370px}.layers .scene{top:74%;transform:scale(.66) rotateX(58deg) rotateZ(-36deg)}}
+@media (max-width:380px){.layers{height:330px}.layers .scene{transform:scale(.58) rotateX(58deg) rotateZ(-36deg)}}
 </style>
 <script>(function(){function ok(t){return t&&t.closest&&t.closest('input,textarea,code,.mail,.copyable')}
 ['copy','cut'].forEach(function(ev){document.addEventListener(ev,function(e){if(!ok(e.target)&&!ok(document.activeElement))e.preventDefault()})});
@@ -524,9 +527,9 @@ document.addEventListener('selectstart',function(e){if(!ok(e.target.nodeType===1
         <div class="scene">
           <div class="plate p3" style="--z:0px;--d:-1s"><p class="pl">3 · Pages AI read</p>
             <div class="row"><b>review</b><s></s></div><div class="row"><b>brand</b><s></s></div><div class="row"><b>list</b><s></s></div><div class="row"><b>news</b><s></s></div></div>
-          <div class="plate p2" style="--z:120px;--d:-.5s"><p class="pl">2 · 4 tools × 3 runs</p>
+          <div class="plate p2" style="--z:185px;--d:-.5s"><p class="pl">2 · 4 tools × 3 runs</p>
             <div class="gridr"><span>ChatGPT</span><i style="--c:var(--c-gpt)"></i><i class="no"></i><i style="--c:var(--c-gpt)"></i><span>Gemini</span><i class="no"></i><i style="--c:var(--c-gem)"></i><i style="--c:var(--c-gem)"></i><span>Perplexity</span><i style="--c:var(--c-ppx)"></i><i style="--c:var(--c-ppx)"></i><i style="--c:var(--c-ppx)"></i><span>AI Mode</span><i style="--c:var(--c-aim)"></i><i class="no"></i><i class="no"></i></div></div>
-          <div class="plate p1" style="--z:240px;--d:0s"><p class="pl">1 · The buyer's question</p><div class="field">"best CRM for small business in India"</div></div>
+          <div class="plate p1" style="--z:370px;--d:0s"><p class="pl">1 · The buyer's question</p><div class="field">"best CRM for small business in India"</div></div>
         </div>
       </div>
       <ol class="steps">
