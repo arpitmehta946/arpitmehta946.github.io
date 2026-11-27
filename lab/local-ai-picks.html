@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What makes Google's AI pick a local business? | AI Search Lab</title>
+<meta name="description" content="I asked Google AI Mode and ChatGPT for the best plumber, dentist and electrician in Chandigarh and Jaipur, 3 times each, and compared the businesses they named with 115 on Google Maps. Named businesses had a median of 421 reviews; skipped ones had 85. Rating made no difference.">
+<meta name="author" content="Arpit Sharma">
+<link rel="canonical" href="https://arpitmehta946.github.io/lab/local-ai-picks.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Arpit Sharma">
+<meta property="og:title" content="What made Google's AI pick a local business?">
+<meta property="og:description" content="115 businesses on Google Maps, 2 cities, 3 trades. Named by AI Mode: median 421 reviews. Skipped: 85. Rating 4.9 vs 4.9.">
+<meta property="og:url" content="https://arpitmehta946.github.io/lab/local-ai-picks.html">
+<meta property="og:image" content="https://arpitmehta946.github.io/lab/local-ai-picks.jpg">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="1350">
+<meta property="og:image:alt" content="Chart: businesses Google AI Mode named had a median of 421 reviews; businesses it skipped had 85">
+<meta property="article:published_time" content="2026-12-01">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#FBF2F4">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","@id":"https://arpitmehta946.github.io/lab/local-ai-picks.html#article","headline":"What makes Google's AI pick a local business?","description":"Google AI Mode and free ChatGPT asked for the best plumber, dentist and electrician in Chandigarh and Jaipur, 3 runs each, 24 and 27 Nov 2026, compared with 115 Google Maps listings.","datePublished":"2026-12-01","author":{"@type":"Person","@id":"https://arpitmehta946.github.io/#arpit","name":"Arpit Sharma","url":"https://arpitmehta946.github.io/"},"isPartOf":{"@type":"CreativeWorkSeries","name":"AI Search Lab"},"image":"https://arpitmehta946.github.io/lab/local-ai-picks.jpg","about":["AI search","Google AI Mode","ChatGPT","local SEO","Google Business Profile","online reviews"]}
+</script>
+<style>
+:root{
+  --night:#17121A;--night-2:#241C27;--night-3:#33283A;--paper:#FBF2F4;--sheet:#FFFFFF;--ink:#24101C;--muted:#64485A;--rule:#EAD9E0;
+  --cite:#C4245A;--mark:#F08DB0;--on-night:#F8EEF3;--on-night-2:#CDBFC8;
+  --disp:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 18px/1.6 var(--disp)}
+a{color:var(--cite);text-underline-offset:3px}
+:focus-visible{outline:3px solid var(--cite);outline-offset:3px;border-radius:6px}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+header.top{background:var(--night);color:var(--on-night);padding:20px 0 128px}
+.crumb{font-size:15px;color:var(--on-night-2)}
+.crumb a{color:var(--on-night)}
+.kick{margin:40px 0 8px;color:var(--mark);font-weight:700;letter-spacing:.06em;font-size:14px;text-transform:uppercase}
+h1{font-size:clamp(32px,5.4vw,52px);line-height:1.08;margin:0 0 16px;font-weight:800;letter-spacing:-.01em}
+.dek{font-size:20px;color:var(--on-night-2);margin:0;max-width:640px}
+.byline{margin-top:20px;font-size:15px;color:var(--on-night-2)}
+main{padding:40px 0 64px}
+h2{font-size:28px;line-height:1.2;margin:48px 0 12px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:-88px 0 8px}
+.stat{background:var(--sheet);border:1px solid var(--rule);border-radius:18px;padding:18px 20px}
+.stat b{display:inline-block;font-size:40px;line-height:1;font-weight:800;margin-bottom:10px}
+.stat span{display:block;font-size:15px;line-height:1.5;color:var(--muted)}
+.stat.hi b{background:linear-gradient(transparent 55%,var(--mark) 55%)}
+mark{background:linear-gradient(transparent 10%,var(--mark) 10%,var(--mark) 90%,transparent 90%);color:var(--ink);padding:0 .14em}
+.tbl{overflow-x:auto;background:var(--sheet);border:1px solid var(--rule);border-radius:18px}
+table{border-collapse:collapse;width:100%;font-size:16px;min-width:560px}
+th,td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:700}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:0}
+tfoot td{font-weight:700}
+.small{font-size:15px;color:var(--muted)}
+.brands{display:grid;gap:12px}
+.brand{background:var(--sheet);border:1px solid var(--rule);border-radius:18px;padding:16px 20px}
+.brand p{margin:4px 0 0;color:var(--cite);font-weight:600}
+figure{margin:24px 0}
+figure img{width:100%;max-width:540px;height:auto;border-radius:18px;display:block}
+figcaption{font-size:15px;color:var(--muted);margin-top:8px}
+ul.limits li,ol.do li{margin-bottom:8px}
+.cta{background:var(--night);color:var(--on-night);border-radius:28px;padding:28px;margin-top:48px}
+.cta h2{margin-top:0;color:#fff}
+.cta a{color:var(--mark)}
+code{font-size:15px;background:#F1E4EA;padding:1px 6px;border-radius:6px;word-break:break-all}
+td:nth-child(2),td:nth-child(3){white-space:nowrap}.dots{display:inline-flex;gap:5px;vertical-align:middle;margin-right:4px}.dots i{width:14px;height:14px;border-radius:4px;background:#EFE1E7;display:block}.dots i.on{background:var(--cite)}
+footer{padding:24px 0 40px;font-size:15px;color:var(--muted)}
+
+/* ===== Lab-at-night theme (shared with homepage, 14 Nov 2026) ===== */
+
+/* Gulal light fixes */
+.stat.hi b{background:linear-gradient(transparent 58%,#F9D3E0 58%)!important}
+.btn.y{background:#C4245A!important;color:#fff!important}.get li::before,.tl li.next b::after{color:#fff!important}header .btn.line,.pick .btn.line,.cta .btn.line{border-color:rgba(248,238,243,.4)!important;color:#F8EEF3!important}.btn.ink{background:#24101C!important;color:#fff!important}mark{background:#F9D3E0;color:#24101C}
+</style>
+<!-- No-copy: blocks casual selecting/copying. Inputs, code samples and the email stay usable. -->
+<style>body{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}input,textarea,code,.mail,.copyable{-webkit-user-select:text;user-select:text}img{-webkit-user-drag:none;user-drag:none}
+/* Dark footer band (matches home) */
+footer{background:#17121A!important;color:#ADA0A9!important;box-shadow:0 0 0 100vmax #17121A;clip-path:inset(0 -100vmax -100vmax);border-top:0!important;padding-top:34px!important;padding-bottom:40px!important}
+footer a{color:#F08DB0!important}footer *{color:inherit}
+
+/* Small-screen nav (22 Nov) */
+@media (max-width:520px){.top{gap:10px}.top>a{font-size:14px;line-height:1.3}.top nav{display:flex;gap:12px;flex-shrink:0}.top nav a{margin-left:0!important;font-size:13.5px;white-space:nowrap}}
+</style>
+<script>(function(){function ok(t){return t&&t.closest&&t.closest('input,textarea,code,.mail,.copyable')}
+['copy','cut'].forEach(function(ev){document.addEventListener(ev,function(e){if(!ok(e.target)&&!ok(document.activeElement))e.preventDefault()})});
+document.addEventListener('dragstart',function(e){if(e.target.tagName==='IMG')e.preventDefault()});
+document.addEventListener('selectstart',function(e){if(!ok(e.target.nodeType===1?e.target:e.target.parentElement))e.preventDefault()});})();</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <p class="crumb"><a href="../">Arpit Sharma</a> · <a href="../#log">AI Search Lab</a> · Local test</p>
+    <p class="kick">AI Search Lab · For local businesses</p>
+    <h1>What makes Google's AI pick a local business?</h1>
+    <p class="dek">In my test, it was the number of reviews, not the rating. The businesses Google AI Mode named had a median of 421 reviews. The ones it skipped had 85. Both groups had a median rating of 4.9.</p>
+    <p class="byline">By Arpit Sharma · Tested 24 and 27 Nov 2026 in Google AI Mode and free ChatGPT, 3 runs per search · Published <time datetime="2026-12-01">1 Dec 2026</time></p>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="stats">
+    <div class="stat hi"><b>421</b><span>median reviews of the businesses AI Mode named</span></div>
+    <div class="stat"><b>85</b><span>median reviews of the businesses it skipped</span></div>
+    <div class="stat"><b>4.9 vs 4.9</b><span>median rating, named vs skipped</span></div>
+  </div>
+
+  <h2>Does Google's AI pick the best-rated local business?</h2>
+  <p>Not in this test. Ratings were nearly identical between the businesses AI Mode named and the ones it skipped: a median of 4.9 stars for both. AI Mode skipped 24 of the 35 businesses rated 5.0.</p>
+
+  <h2>What did the businesses AI Mode named have in common?</h2>
+  <p>More reviews. In every one of the 6 searches, the businesses AI Mode named had more reviews than the ones it skipped. Of the 5 most-reviewed businesses in each search, AI Mode named 22 of 30.</p>
+  <figure><img src="local-ai-picks.jpg" alt="Chart: businesses Google AI Mode named had a median of 421 reviews; businesses it skipped had 85. Rating 4.9 vs 4.9, services list 12% vs 10%, owner posts 50% vs 29%." width="1080" height="1350" loading="lazy"><figcaption>115 businesses on Google Maps, Chandigarh and Jaipur, plumbers, dentists and electricians.</figcaption></figure>
+
+  <h2>Results for each search</h2>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Search ("best &lt;trade&gt; in &lt;city&gt;")</th><th class="n">Maps listings checked</th><th class="n">Named by AI Mode</th><th class="n">Median reviews, named</th><th class="n">Median reviews, skipped</th><th class="n">Named by ChatGPT</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Plumber, Chandigarh</strong></td><td class="n">20</td><td class="n">7</td><td class="n"><strong>294</strong></td><td class="n">46</td><td class="n">5</td></tr>
+        <tr><td><strong>Dentist, Chandigarh</strong></td><td class="n">19</td><td class="n">7</td><td class="n"><strong>891</strong></td><td class="n">315</td><td class="n">3</td></tr>
+        <tr><td><strong>Electrician, Chandigarh</strong></td><td class="n">19</td><td class="n">6</td><td class="n"><strong>82</strong></td><td class="n">23</td><td class="n">4</td></tr>
+        <tr><td><strong>Plumber, Jaipur</strong></td><td class="n">19</td><td class="n">9</td><td class="n"><strong>349</strong></td><td class="n">49</td><td class="n">7</td></tr>
+        <tr><td><strong>Dentist, Jaipur</strong></td><td class="n">19</td><td class="n">9</td><td class="n"><strong>709</strong></td><td class="n">390</td><td class="n">3</td></tr>
+        <tr><td><strong>Electrician, Jaipur</strong></td><td class="n">19</td><td class="n">4</td><td class="n"><strong>299</strong></td><td class="n">76</td><td class="n">4</td></tr>
+      </tbody>
+      <tfoot><tr><td>All 6 searches</td><td class="n">115</td><td class="n">42</td><td class="n">421</td><td class="n">85</td><td class="n">26</td></tr></tfoot>
+    </table>
+  </div>
+  <p class="small">"Named" means named in at least 1 of 3 runs and also in the Maps listings checked. AI Mode and ChatGPT also named a few businesses that were not in those listings; they are left out of the medians. Business names are left out on purpose: this tests the AI tools, not the businesses.</p>
+
+  <h2>Does a Services list on the Google profile help?</h2>
+  <p>Not clearly. A Services section showed on 12% of the profiles AI Mode named and 10% of the ones it skipped, and the direction flipped between searches.</p>
+
+  <h2>What else differed?</h2>
+  <ul>
+    <li><strong>Owner posts</strong> on the Google profile: 50% of named profiles had them, 29% of skipped ones. Higher among named businesses in 5 of 6 searches. A possible second signal, weaker than reviews.</li>
+    <li><strong>Website:</strong> 62% of named businesses had one, 47% of skipped ones.</li>
+  </ul>
+
+  <h2>Is there a minimum number of reviews?</h2>
+  <p>No fixed number. AI Mode named some electricians with under 50 reviews. In Chandigarh, 13 of 19 electricians on Maps had under 100 reviews, so the bar was lower there. Among dentists, where many clinics have 300 to 2,000 reviews, AI Mode skipped clinics with 500 or more.</p>
+
+  <h2>Does ChatGPT pick the same local businesses?</h2>
+  <p>Mostly. ChatGPT showed the same pattern, a bit weaker: a median of 317 reviews for the businesses it named and 101 for the ones it skipped. It also named a few businesses that were not in the Google Maps listings checked.</p>
+
+  <h2>What should a local business do?</h2>
+  <ol class="do">
+    <li><strong>Ask every happy customer for a review, every month.</strong> The count is compared with the businesses near you.</li>
+    <li><strong>Don't chase a perfect rating.</strong> In this test, 108 of 115 businesses were rated 4.7 or higher.</li>
+    <li><strong>Keep the profile active</strong> with owner posts.</li>
+    <li><strong>Ask Google AI Mode and ChatGPT your customer's question 3 times</strong> and note who gets named.</li>
+  </ol>
+  <p>The full check is in <a href="../self-check.html">the free AI visibility self-check</a>.</p>
+
+  <h2>How was this test run?</h2>
+  <ul>
+    <li><strong>Searches:</strong> "best plumber / dentist / electrician in Chandigarh / Jaipur", 6 in total.</li>
+    <li><strong>Tools:</strong> Google AI Mode (one personal account, 3 URL variants) and free ChatGPT (temporary chat), in Chrome from India. Each search 3 times per tool.</li>
+    <li><strong>Maps:</strong> for each search, the Google Maps results for the same query were opened one by one and logged: rating, number of reviews, website, Services section, owner posts and photos. 115 listings in total (a few duplicates and panels that failed to open were left out).</li>
+    <li><strong>Dates:</strong> Chandigarh plumbers and dentists on 24 Nov 2026; the rest on 24 and 27 Nov 2026.</li>
+  </ul>
+
+  <h2>What are the limits of this test?</h2>
+  <ul class="limits">
+    <li><strong>Small sample:</strong> 2 cities, 3 trades, 3 runs per tool. It shows a pattern, not a rule.</li>
+    <li><strong>Correlation, not proof:</strong> businesses with many reviews may also do everything else well. A before-and-after change on one real profile would be the proof.</li>
+    <li><strong>What Maps shows:</strong> I logged what the public Maps panel shows. A business may have more details in its Google profile than Maps displays.</li>
+    <li><strong>Who ran it:</strong> my AI assistant typed and logged the runs in my accounts, following a fixed script.</li>
+  </ul>
+
+  <div class="cta">
+    <h2>Check your own business</h2>
+    <p>Use the same method in about 10 minutes with the <a href="../self-check.html">free AI visibility self-check</a>, and follow <a href="https://www.linkedin.com/in/arpitsharmaoff" rel="me">AI Search Lab on LinkedIn</a> for each new test.</p>
+  </div>
+</main>
+
+<footer class="wrap">
+  <p><a href="../">Arpit Sharma</a> · an engineer who writes · AI Search Lab · <a href="../#log">All experiments</a></p>
+</footer>
+</body>
+</html>
