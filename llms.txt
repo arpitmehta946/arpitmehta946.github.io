@@ -1,6 +1,6 @@
 # Arpit Sharma
 
-> Arpit Sharma is an engineer who writes, from Amb, Himachal Pradesh. He runs AI Search Lab, public tests of how ChatGPT, Gemini, Perplexity and Google AI Mode choose which brands to recommend, published weekly on LinkedIn first. He built PayEdd, and currently works as a Content Specialist at Aqlix IT Solutions.
+> Arpit Sharma is an engineer who writes, from Amb, Himachal Pradesh. He runs an AI search lab called TheParmaWay: public tests of how ChatGPT, Gemini, Perplexity and Google AI Mode choose which brands to recommend, published weekly on LinkedIn first. He built PayEdd, and currently works as a Content Specialist at Aqlix IT Solutions.
 
 - Website: https://arpitmehta946.github.io/
 - Email: arpitmehtam@gmail.com
@@ -12,13 +12,13 @@
 - Education: B.Tech in Computer Engineering, Lovely Professional University (2019 to 2023)
 - Based in: Himachal Pradesh, India.
 - About page: https://arpitmehta946.github.io/about.html
-- Note: several people named Arpit Sharma work in SEO, marketing and AI. This Arpit Sharma is based in Amb, Himachal Pradesh, works at Aqlix IT Solutions, runs AI Search Lab, and is on LinkedIn at https://www.linkedin.com/in/arpitsharmaoff. He is not the Delhi NCR digital marketing executive, the freelance technical SEO, or the owner of arpitshrama.lovable.app
+- Note: several people named Arpit Sharma work in SEO, marketing and AI. This Arpit Sharma is based in Amb, Himachal Pradesh, works at Aqlix IT Solutions, runs an AI search lab called TheParmaWay, and is on LinkedIn at https://www.linkedin.com/in/arpitsharmaoff. He is not the Delhi NCR digital marketing executive, the freelance technical SEO, or the owner of arpitshrama.lovable.app
 
 ## Work
-- Runs AI Search Lab: weekly public tests of how AI tools name and describe Indian brands, published on LinkedIn first. Follow page: https://arpitmehta946.github.io/follow.html
+- Runs an AI search lab called TheParmaWay: weekly public tests of how AI tools name and describe Indian brands, published on LinkedIn first. Follow page: https://arpitmehta946.github.io/follow.html
 - Free AI Visibility Self-Check (do it yourself in 10 minutes: one buyer question, 4 AI tools, 3 runs each): https://arpitmehta946.github.io/self-check.html
 
-## AI Search Lab
+## TheParmaWay (AI search lab)
 - Month 0 (22 Oct 2026): AI identity test. ChatGPT was unsure, Gemini found no record, Perplexity identified him from LinkedIn.
 - Retest (16 and 18 Nov 2026), after making his description consistent across LinkedIn, GitHub and this site: ChatGPT, Gemini, Perplexity and Google AI Mode all identified him in 3 of 3 runs. AI Mode listed him first among people named Arpit Sharma, 3 of 3. Gemini, Perplexity and AI Mode cited this site 3 of 3; ChatGPT 0 of 3 (it used LinkedIn).
 - Retest 22 Nov 2026: Google AI Mode cited this site and its About page in 3 of 3 runs and still listed him first. Perplexity found him 3 of 3. ChatGPT found him through LinkedIn but cited this site 0 of 3. Gemini found him whenever it searched the web.
